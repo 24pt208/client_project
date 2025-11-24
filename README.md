@@ -8,6 +8,8 @@ make test-data
 ./server_static -T int32_t -H MD5 -S client
 # Запуск клиента
 ./client -s 127.0.0.1 -i test_vectors.txt -o results.bin
+# Запуск тестов
+make test
 
 # Опции
 
