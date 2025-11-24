@@ -5,13 +5,13 @@
 UserInterface::UserInterface() : desc_("Допустимые параметры") {
     desc_.add_options()
         ("help,h", "Показать справку")
-        ("server,s", boost::program_options::value<std::string>(&params_.server_address), 
+        ("server,s", boost::program_options::value<std::string>(&params_.server_address)->required(), 
          "Адрес сервера (обязательный)")
         ("port,p", boost::program_options::value<uint16_t>(&params_.port)->default_value(33333), 
          "Порт сервера (по умолчанию: 33333)")
-        ("input,i", boost::program_options::value<std::string>(&params_.input_file), 
+        ("input,i", boost::program_options::value<std::string>(&params_.input_file)->required(), 
          "Файл с исходными данными (обязательный)")
-        ("output,o", boost::program_options::value<std::string>(&params_.output_file), 
+        ("output,o", boost::program_options::value<std::string>(&params_.output_file)->required(), 
          "Файл для сохранения результатов (обязательный)")
         ("config,c", boost::program_options::value<std::string>(&params_.config_file)->default_value("~/.config/vclient.conf"), 
          "Файл конфигурации с логином и паролем (по умолчанию: ~/.config/vclient.conf)");
@@ -30,11 +30,22 @@ bool UserInterface::parseArguments(int argc, char** argv) {
             }
         }
         
-        po::store(po::parse_command_line(argc, argv, desc_), vm);
-        
         // Если нет параметров - показываем справку
         if (argc == 1) {
             return false;
+        }
+        
+        po::store(po::parse_command_line(argc, argv, desc_), vm);
+        
+        // Проверяем обязательные параметры ДО вызова notify
+        if (vm.count("help")) {
+            return false;
+        }
+        
+        // Теперь проверяем обязательные параметры
+        bool has_required = vm.count("server") && vm.count("input") && vm.count("output");
+        if (!has_required) {
+            throw po::error("Отсутствуют обязательные параметры");
         }
         
         po::notify(vm);
@@ -43,6 +54,8 @@ bool UserInterface::parseArguments(int argc, char** argv) {
     } catch (const po::error& e) {
         throw std::runtime_error("Ошибка разбора параметров: " + std::string(e.what()) + 
                                "\nИспользуйте -h для справки");
+    } catch (const std::exception& e) {
+        throw std::runtime_error("Ошибка: " + std::string(e.what()));
     }
 }
 

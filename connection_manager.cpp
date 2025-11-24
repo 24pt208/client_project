@@ -2,13 +2,29 @@
 #include "auth_manager.h"
 #include <iostream>
 #include <cstring>
+#include <sys/ioctl.h>
 
 ConnectionManager::ConnectionManager(const std::string& server_addr, uint16_t port) 
-    : server_addr_(server_addr), port_(port) {
+    : socket_(-1), server_addr_(server_addr), port_(port) {  // Правильный порядок инициализации
     
     socket_ = socket(AF_INET, SOCK_STREAM, 0);
     if (socket_ == -1) {
         throw std::system_error(errno, std::generic_category(), "Ошибка создания сокета");
+    }
+    
+    // Установка таймаута для операций с сокетом
+    struct timeval timeout;
+    timeout.tv_sec = 180;  // 3 минуты
+    timeout.tv_usec = 0;
+    
+    if (setsockopt(socket_, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout)) < 0) {
+        close(socket_);
+        throw std::system_error(errno, std::generic_category(), "Ошибка установки таймаута приема");
+    }
+    
+    if (setsockopt(socket_, SOL_SOCKET, SO_SNDTIMEO, &timeout, sizeof(timeout)) < 0) {
+        close(socket_);
+        throw std::system_error(errno, std::generic_category(), "Ошибка установки таймаута отправки");
     }
     
     sockaddr_in serv_addr{};
@@ -39,10 +55,14 @@ void ConnectionManager::authenticate(const std::string& login, const std::string
     std::string auth_message = login + salt + hash;
     sendString(auth_message);
     
-    std::string response = receiveString();
+    std::string response = receiveString(1024);
+    
+    if (response == "ERR") {
+        throw std::runtime_error("Ошибка аутентификации. Сервер отклонил запрос");
+    }
     
     if (response != "OK") {
-        throw std::runtime_error("Ошибка аутентификации. Сервер вернул: " + response);
+        throw std::runtime_error("Неожиданный ответ сервера при аутентификации: " + response);
     }
 }
 
@@ -58,7 +78,10 @@ std::vector<int32_t> ConnectionManager::processVectors(const std::vector<std::ve
         
         uint32_t vector_size = vector.size();
         sendData(&vector_size, sizeof(vector_size));
-        sendData(vector.data(), vector_size * sizeof(int32_t));
+        
+        if (!vector.empty()) {
+            sendData(vector.data(), vector_size * sizeof(int32_t));
+        }
         
         int32_t result;
         receiveData(&result, sizeof(result));
@@ -69,26 +92,31 @@ std::vector<int32_t> ConnectionManager::processVectors(const std::vector<std::ve
 }
 
 void ConnectionManager::sendData(const void* data, size_t size) {
-    ssize_t bytes_sent = send(socket_, data, size, 0);
-    if (bytes_sent == -1) {
-        throw std::system_error(errno, std::generic_category(), "Ошибка отправки данных");
-    }
-    if (static_cast<size_t>(bytes_sent) != size) {
-        throw std::runtime_error("Отправлено не все данных. Ожидалось: " + 
-                               std::to_string(size) + ", отправлено: " + 
-                               std::to_string(bytes_sent));
+    ssize_t total_sent = 0;
+    while (total_sent < static_cast<ssize_t>(size)) {
+        ssize_t bytes_sent = send(socket_, 
+                                 static_cast<const char*>(data) + total_sent, 
+                                 size - total_sent, 0);
+        if (bytes_sent == -1) {
+            throw std::system_error(errno, std::generic_category(), "Ошибка отправки данных");
+        }
+        total_sent += bytes_sent;
     }
 }
 
 void ConnectionManager::receiveData(void* data, size_t size) {
-    ssize_t bytes_received = recv(socket_, data, size, 0);
-    if (bytes_received == -1) {
-        throw std::system_error(errno, std::generic_category(), "Ошибка приема данных");
-    }
-    if (static_cast<size_t>(bytes_received) != size) {
-        throw std::runtime_error("Получено не все данных. Ожидалось: " + 
-                               std::to_string(size) + ", получено: " + 
-                               std::to_string(bytes_received));
+    ssize_t total_received = 0;
+    while (total_received < static_cast<ssize_t>(size)) {
+        ssize_t bytes_received = recv(socket_, 
+                                     static_cast<char*>(data) + total_received, 
+                                     size - total_received, 0);
+        if (bytes_received == -1) {
+            throw std::system_error(errno, std::generic_category(), "Ошибка приема данных");
+        }
+        if (bytes_received == 0) {
+            throw std::runtime_error("Соединение закрыто сервером");
+        }
+        total_received += bytes_received;
     }
 }
 
@@ -101,6 +129,9 @@ std::string ConnectionManager::receiveString(size_t max_length) {
     ssize_t bytes_received = recv(socket_, buffer.data(), buffer.size(), 0);
     if (bytes_received == -1) {
         throw std::system_error(errno, std::generic_category(), "Ошибка приема строки");
+    }
+    if (bytes_received == 0) {
+        throw std::runtime_error("Соединение закрыто сервером");
     }
     return std::string(buffer.data(), bytes_received);
 }
