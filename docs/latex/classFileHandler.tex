@@ -1,0 +1,107 @@
+\hypertarget{classFileHandler}{}\doxysection{File\+Handler Class Reference}
+\label{classFileHandler}\index{FileHandler@{FileHandler}}
+
+
+Статический класс для операций с файлами  
+
+
+
+
+{\ttfamily \#include $<$file\+\_\+handler.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::vector$<$ int32\+\_\+t $>$ $>$ \mbox{\hyperlink{classFileHandler_a1da9f6bcd8eea975bff60f6acf3f9849}{read\+Vectors}} (const std\+::string \&filename)
+\item 
+static void \mbox{\hyperlink{classFileHandler_af0d9bfa7dd3a74351f871fa71e5dc0cc}{save\+Results}} (const std\+::string \&filename, const std\+::vector$<$ int32\+\_\+t $>$ \&results)
+\item 
+static std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classFileHandler_abe55899ef860571b11d660cc26e3f04a}{read\+Config}} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFileHandler_a07661bacc2ad3e391e9a57a9080dc354}{File\+Handler}} ()=delete
+\item 
+\mbox{\hyperlink{classFileHandler_a5470c1297f5f78ba0b6387e83b2a04db}{$\sim$\+File\+Handler}} ()=delete
+\item 
+\mbox{\hyperlink{classFileHandler_ac2ec12fb0e836d0d7905f69a86c82e4a}{File\+Handler}} (const \mbox{\hyperlink{classFileHandler}{File\+Handler}} \&)=delete
+\item 
+\mbox{\hyperlink{classFileHandler}{File\+Handler}} \& \mbox{\hyperlink{classFileHandler_a294a60a3b969cd0a23107a1308931151}{operator=}} (const \mbox{\hyperlink{classFileHandler}{File\+Handler}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Статический класс для операций с файлами 
+
+Definition at line 18 of file file\+\_\+handler.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFileHandler_a07661bacc2ad3e391e9a57a9080dc354}\label{classFileHandler_a07661bacc2ad3e391e9a57a9080dc354}} 
+\index{FileHandler@{FileHandler}!FileHandler@{FileHandler}}
+\index{FileHandler@{FileHandler}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{FileHandler()}{FileHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily File\+Handler\+::\+File\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classFileHandler_a5470c1297f5f78ba0b6387e83b2a04db}\label{classFileHandler_a5470c1297f5f78ba0b6387e83b2a04db}} 
+\index{FileHandler@{FileHandler}!````~FileHandler@{$\sim$FileHandler}}
+\index{````~FileHandler@{$\sim$FileHandler}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$FileHandler()}{~FileHandler()}}
+{\footnotesize\ttfamily File\+Handler\+::$\sim$\+File\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classFileHandler_ac2ec12fb0e836d0d7905f69a86c82e4a}\label{classFileHandler_ac2ec12fb0e836d0d7905f69a86c82e4a}} 
+\index{FileHandler@{FileHandler}!FileHandler@{FileHandler}}
+\index{FileHandler@{FileHandler}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{FileHandler()}{FileHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily File\+Handler\+::\+File\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFileHandler}{File\+Handler}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileHandler_a294a60a3b969cd0a23107a1308931151}\label{classFileHandler_a294a60a3b969cd0a23107a1308931151}} 
+\index{FileHandler@{FileHandler}!operator=@{operator=}}
+\index{operator=@{operator=}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFileHandler}{File\+Handler}}\& File\+Handler\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFileHandler}{File\+Handler}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classFileHandler_abe55899ef860571b11d660cc26e3f04a}\label{classFileHandler_abe55899ef860571b11d660cc26e3f04a}} 
+\index{FileHandler@{FileHandler}!readConfig@{readConfig}}
+\index{readConfig@{readConfig}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{readConfig()}{readConfig()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ File\+Handler\+::read\+Config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 70 of file file\+\_\+handler.\+cpp.
+
+\mbox{\Hypertarget{classFileHandler_a1da9f6bcd8eea975bff60f6acf3f9849}\label{classFileHandler_a1da9f6bcd8eea975bff60f6acf3f9849}} 
+\index{FileHandler@{FileHandler}!readVectors@{readVectors}}
+\index{readVectors@{readVectors}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{readVectors()}{readVectors()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ int32\+\_\+t $>$ $>$ File\+Handler\+::read\+Vectors (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2stud_2client_project_2src_2test_main_8cpp-example}{/home/stud/client\+\_\+project/src/test\+\_\+main.\+cpp}}.\end{Desc}
+
+
+Definition at line 11 of file file\+\_\+handler.\+cpp.
+
+\mbox{\Hypertarget{classFileHandler_af0d9bfa7dd3a74351f871fa71e5dc0cc}\label{classFileHandler_af0d9bfa7dd3a74351f871fa71e5dc0cc}} 
+\index{FileHandler@{FileHandler}!saveResults@{saveResults}}
+\index{saveResults@{saveResults}!FileHandler@{FileHandler}}
+\doxysubsubsection{\texorpdfstring{saveResults()}{saveResults()}}
+{\footnotesize\ttfamily void File\+Handler\+::save\+Results (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::vector$<$ int32\+\_\+t $>$ \&}]{results }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 50 of file file\+\_\+handler.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{file__handler_8h}{file\+\_\+handler.\+h}}\item 
+src/\mbox{\hyperlink{file__handler_8cpp}{file\+\_\+handler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Главный модуль клиентского приложения  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}user\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connection\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a1d8d6c45fee196f1f4768bdebbc049f0}{create\+Demo\+Input\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Создает демонстрационный входной файл \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad662b215a562621b4c0bac2377cfe762}{create\+Config\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Создает конфигурационный файл \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aafe7c72b821f6a4ddfa9cd3b75d19e4f}{ensure\+Files\+Exist}} (const std\+::string \&input\+\_\+file, const std\+::string \&config\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Проверяет и создает отсутствующие файлы \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Точка входа в программу \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Главный модуль клиентского приложения 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ad662b215a562621b4c0bac2377cfe762}\label{main_8cpp_ad662b215a562621b4c0bac2377cfe762}} 
+\index{main.cpp@{main.cpp}!createConfigFile@{createConfigFile}}
+\index{createConfigFile@{createConfigFile}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createConfigFile()}{createConfigFile()}}
+{\footnotesize\ttfamily void create\+Config\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Создает конфигурационный файл 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Имя конфигурационного файла \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a1d8d6c45fee196f1f4768bdebbc049f0}\label{main_8cpp_a1d8d6c45fee196f1f4768bdebbc049f0}} 
+\index{main.cpp@{main.cpp}!createDemoInputFile@{createDemoInputFile}}
+\index{createDemoInputFile@{createDemoInputFile}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createDemoInputFile()}{createDemoInputFile()}}
+{\footnotesize\ttfamily void create\+Demo\+Input\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Создает демонстрационный входной файл 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Имя файла для создания \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aafe7c72b821f6a4ddfa9cd3b75d19e4f}\label{main_8cpp_aafe7c72b821f6a4ddfa9cd3b75d19e4f}} 
+\index{main.cpp@{main.cpp}!ensureFilesExist@{ensureFilesExist}}
+\index{ensureFilesExist@{ensureFilesExist}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ensureFilesExist()}{ensureFilesExist()}}
+{\footnotesize\ttfamily void ensure\+Files\+Exist (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+file,  }\item[{const std\+::string \&}]{config\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Проверяет и создает отсутствующие файлы 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+file} & Входной файл \\
+\hline
+{\em config\+\_\+file} & Конфигурационный файл \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Количество аргументов \\
+\hline
+{\em argv} & Массив аргументов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 при успехе, 1 при ошибке 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2stud_2client_project_2src_2test_main_8cpp-example}{/home/stud/client\+\_\+project/src/test\+\_\+main.\+cpp}}.\end{Desc}
+
+
+Definition at line 93 of file main.\+cpp.
+

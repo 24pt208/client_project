@@ -1,0 +1,5 @@
+<map id="src/connection_manager.h" name="src/connection_manager.h">
+<area shape="rect" id="node1" title="Заголовочный файл класса управления соединением" alt="" coords="102,5,294,32"/>
+<area shape="rect" id="node2" href="$connection__manager_8cpp.html" title="Реализация класса управления соединением" alt="" coords="5,80,212,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Главный модуль клиентского приложения" alt="" coords="236,80,341,107"/>
+</map>

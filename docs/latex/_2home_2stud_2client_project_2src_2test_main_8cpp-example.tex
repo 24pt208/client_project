@@ -1,0 +1,108 @@
+\hypertarget{_2home_2stud_2client_project_2src_2test_main_8cpp-example}{}\doxysection{/home/stud/client\+\_\+project/src/test\+\_\+main.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Сборка и запуск тестов}}
+\DoxyCodeLine{g++ -\/o test\_client test\_main.cpp user\_interface.cpp file\_handler.cpp \(\backslash\)
+     auth\_manager.cpp -\/lUnitTest++ -\/lcryptopp}
+\DoxyCodeLine{./test\_client}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <UnitTest++/UnitTest++.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{user__interface_8h}{user\_interface.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{file__handler_8h}{file\_handler.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{auth__manager_8h}{auth\_manager.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}  }
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Тестирование пользовательского интерфейса}}
+\DoxyCodeLine{\mbox{\hyperlink{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}{SUITE}}(UserInterfaceTest)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    TEST(HelpShort) \{}
+\DoxyCodeLine{        \mbox{\hyperlink{classUserInterface}{UserInterface}} ui;}
+\DoxyCodeLine{        \textcolor{keyword}{const} \textcolor{keywordtype}{char}* argv[] = \{\textcolor{stringliteral}{"{}test"{}}, \textcolor{stringliteral}{"{}-\/h"{}}, \textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{        \textcolor{keywordtype}{int} argc = \textcolor{keyword}{sizeof}(argv) / \textcolor{keyword}{sizeof}(argv[0]) -\/ 1;}
+\DoxyCodeLine{        CHECK(!ui.\mbox{\hyperlink{classUserInterface_a4e73e1919254b42615165e5ad03b679a}{parseArguments}}(argc, \textcolor{keyword}{const\_cast<}\textcolor{keywordtype}{char}**\textcolor{keyword}{>}(argv)));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{// ... остальные тесты UserInterface}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Фикстура для тестирования файлов}}
+\DoxyCodeLine{\textcolor{comment}{}\textcolor{keyword}{struct }\mbox{\hyperlink{structTestFileFixture}{TestFileFixture}} \{}
+\DoxyCodeLine{    std::string \mbox{\hyperlink{structTestFileFixture_aec7f3f16e4af2cba18c40c19f9ae1d76}{test\_filename}};  }
+\DoxyCodeLine{    std::string \mbox{\hyperlink{structTestFileFixture_a841a8ec3123242db56ee2dfb654d7596}{test\_output}};    }
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{structTestFileFixture_a9a577690f2ed068ec3a46ffc0209161c}{TestFileFixture}}() : \mbox{\hyperlink{structTestFileFixture_aec7f3f16e4af2cba18c40c19f9ae1d76}{test\_filename}}(\textcolor{stringliteral}{"{}test\_input.txt"{}}), \mbox{\hyperlink{structTestFileFixture_a841a8ec3123242db56ee2dfb654d7596}{test\_output}}(\textcolor{stringliteral}{"{}test\_output.bin"{}}) \{}
+\DoxyCodeLine{        \textcolor{comment}{// Создаем тестовый файл}}
+\DoxyCodeLine{        std::ofstream file(\mbox{\hyperlink{structTestFileFixture_aec7f3f16e4af2cba18c40c19f9ae1d76}{test\_filename}});}
+\DoxyCodeLine{        file << \textcolor{stringliteral}{"{}2\(\backslash\)n"{}};           \textcolor{comment}{// количество векторов}}
+\DoxyCodeLine{        file << \textcolor{stringliteral}{"{}3\(\backslash\)n"{}};           \textcolor{comment}{// размер первого вектора}}
+\DoxyCodeLine{        file << \textcolor{stringliteral}{"{}1 2 3\(\backslash\)n"{}};       \textcolor{comment}{// значения первого вектора}}
+\DoxyCodeLine{        file << \textcolor{stringliteral}{"{}2\(\backslash\)n"{}};           \textcolor{comment}{// размер второго вектора  }}
+\DoxyCodeLine{        file << \textcolor{stringliteral}{"{}10 20\(\backslash\)n"{}};       \textcolor{comment}{// значения второго вектора}}
+\DoxyCodeLine{        file.close();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{structTestFileFixture_a5b65e03895a6cda2c035d28a7a5d1faf}{\string~TestFileFixture}}() \{}
+\DoxyCodeLine{        std::remove(\mbox{\hyperlink{structTestFileFixture_aec7f3f16e4af2cba18c40c19f9ae1d76}{test\_filename}}.c\_str());}
+\DoxyCodeLine{        std::remove(\mbox{\hyperlink{structTestFileFixture_a841a8ec3123242db56ee2dfb654d7596}{test\_output}}.c\_str());}
+\DoxyCodeLine{        std::remove(\textcolor{stringliteral}{"{}test\_config.conf"{}});}
+\DoxyCodeLine{        std::remove(\textcolor{stringliteral}{"{}empty\_file.txt"{}});}
+\DoxyCodeLine{        std::remove(\textcolor{stringliteral}{"{}invalid\_file.txt"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Тестирование работы с файлами}}
+\DoxyCodeLine{\mbox{\hyperlink{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}{SUITE}}(FileHandlerTest)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    TEST\_FIXTURE(\mbox{\hyperlink{structTestFileFixture}{TestFileFixture}}, ReadVectorsValid) \{}
+\DoxyCodeLine{        \textcolor{keyword}{auto} vectors = \mbox{\hyperlink{classFileHandler_a1da9f6bcd8eea975bff60f6acf3f9849}{FileHandler::readVectors}}(\textcolor{stringliteral}{"{}test\_input.txt"{}});}
+\DoxyCodeLine{        CHECK\_EQUAL(2, vectors.size());}
+\DoxyCodeLine{        CHECK\_EQUAL(3, vectors[0].size());}
+\DoxyCodeLine{        CHECK\_EQUAL(2, vectors[1].size());}
+\DoxyCodeLine{        CHECK\_EQUAL(1, vectors[0][0]);}
+\DoxyCodeLine{        CHECK\_EQUAL(2, vectors[0][1]);}
+\DoxyCodeLine{        CHECK\_EQUAL(3, vectors[0][2]);}
+\DoxyCodeLine{        CHECK\_EQUAL(10, vectors[1][0]);}
+\DoxyCodeLine{        CHECK\_EQUAL(20, vectors[1][1]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{// ... остальные тесты FileHandler}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Тестирование аутентификации}}
+\DoxyCodeLine{\mbox{\hyperlink{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}{SUITE}}(AuthManagerTest)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    TEST(GenerateSaltLength) \{}
+\DoxyCodeLine{        std::string salt = \mbox{\hyperlink{classAuthManager_a6bf14f0993a741b3f3c7c1da298cddaf}{AuthManager::generateSalt}}();}
+\DoxyCodeLine{        CHECK\_EQUAL(16, salt.length()); \textcolor{comment}{// 64 бита = 16 hex цифр}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{// ... остальные тесты AuthManager}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}() \{}
+\DoxyCodeLine{    std::cout << \textcolor{stringliteral}{"{}=== Запуск модульных тестов клиента ==="{}} << std::endl;}
+\DoxyCodeLine{    std::cout << \textcolor{stringliteral}{"{}Тестирование всех компонентов системы..."{}} << std::endl;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{// Запуск всех тестов}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} result = UnitTest::RunAllTests();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (result == 0) \{}
+\DoxyCodeLine{        std::cout << \textcolor{stringliteral}{"{}=== ВСЕ ТЕСТЫ ПРОЙДЕНЫ УСПЕШНО ==="{}} << std::endl;}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{        std::cout << \textcolor{stringliteral}{"{}=== НЕКОТОРЫЕ ТЕСТЫ НЕ ПРОЙДЕНЫ ==="{}} << std::endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

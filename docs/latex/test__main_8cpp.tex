@@ -1,0 +1,128 @@
+\hypertarget{test__main_8cpp}{}\doxysection{src/test\+\_\+main.cpp File Reference}
+\label{test__main_8cpp}\index{src/test\_main.cpp@{src/test\_main.cpp}}
+
+
+Модульные тесты для клиентского приложения  
+
+
+{\ttfamily \#include $<$Unit\+Test++/\+Unit\+Test++.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}user\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for test\+\_\+main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTestFileFixture}{Test\+File\+Fixture}}
+\begin{DoxyCompactList}\small\item\em Фикстура для тестирования работы с файлами \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}{SUITE}} (User\+Interface\+Test)
+\item 
+\mbox{\hyperlink{test__main_8cpp_ad978ef563c93ffa0a173a366ad758a94}{SUITE}} (File\+Handler\+Test)
+\item 
+\mbox{\hyperlink{test__main_8cpp_a4359f8fbd30dad6a8405241476c861eb}{SUITE}} (Auth\+Manager\+Test)
+\item 
+int \mbox{\hyperlink{test__main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Главная функция тестов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Модульные тесты для клиентского приложения 
+
+\begin{DoxyAuthor}{Author}
+Пресняков А.\+А. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28.\+10.\+2025 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+ИБСТ ПГУ
+\end{DoxyCopyright}
+Содержит модульные тесты для всех компонентов системы\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classUserInterface}{User\+Interface}} (пользовательский интерфейс)
+\item \mbox{\hyperlink{classFileHandler}{File\+Handler}} (работа с файлами)
+\item \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} (аутентификация)
+\item Интеграционные тесты
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Использует фреймворк Unit\+Test++ 
+
+Все тесты выполняются автоматически при запуске 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test\_main.cpp@{test\_main.cpp}!main@{main}}
+\index{main@{main}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Главная функция тестов 
+
+\begin{DoxyReturn}{Returns}
+Количество неудачных тестов (0 -\/ все тесты прошли)
+\end{DoxyReturn}
+Запускает все тесты и выводит результаты 
+
+Definition at line 134 of file test\+\_\+main.\+cpp.
+
+\mbox{\Hypertarget{test__main_8cpp_a4359f8fbd30dad6a8405241476c861eb}\label{test__main_8cpp_a4359f8fbd30dad6a8405241476c861eb}} 
+\index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Auth\+Manager\+Test}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000003}{Test}}]Generate\+Salt\+Length \end{DoxyRefDesc}
+Тест длины генерируемой соли
+
+Definition at line 114 of file test\+\_\+main.\+cpp.
+
+\mbox{\Hypertarget{test__main_8cpp_ad978ef563c93ffa0a173a366ad758a94}\label{test__main_8cpp_ad978ef563c93ffa0a173a366ad758a94}} 
+\index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{File\+Handler\+Test}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000002}{Test}}]Read\+Vectors\+Valid \end{DoxyRefDesc}
+Тест чтения корректного файла с векторами
+
+Definition at line 92 of file test\+\_\+main.\+cpp.
+
+\mbox{\Hypertarget{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}\label{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}} 
+\index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{User\+Interface\+Test}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000001}{Test}}]Help\+Short \end{DoxyRefDesc}
+Тест короткой формы справки (-\/h)\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2stud_2client_project_2src_2test_main_8cpp-example}{/home/stud/client\+\_\+project/src/test\+\_\+main.\+cpp}}.\end{Desc}
+
+
+Definition at line 36 of file test\+\_\+main.\+cpp.
+

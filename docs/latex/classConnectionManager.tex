@@ -1,0 +1,174 @@
+\hypertarget{classConnectionManager}{}\doxysection{Connection\+Manager Class Reference}
+\label{classConnectionManager}\index{ConnectionManager@{ConnectionManager}}
+
+
+Класс для управления TCP-\/соединением с сервером  
+
+
+
+
+{\ttfamily \#include $<$connection\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConnectionManager_abf196969be8197358e3313314b9d91e3}{Connection\+Manager}} (const std\+::string \&server\+\_\+addr, uint16\+\_\+t port)
+\item 
+virtual \mbox{\hyperlink{classConnectionManager_a5c2a49d02244fc399deba3ce6ffe77ac}{$\sim$\+Connection\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classConnectionManager_abe29edfc1c35f0ec66e882650a616c87}{authenticate}} (const std\+::string \&login, const std\+::string \&password)
+\item 
+std\+::vector$<$ int32\+\_\+t $>$ \mbox{\hyperlink{classConnectionManager_a21073516e0de49c4133f2dad2adf4d82}{process\+Vectors}} (const std\+::vector$<$ std\+::vector$<$ int32\+\_\+t $>$$>$ \&vectors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classConnectionManager_aac11236d653989216a87210412caeb0e}{send\+Data}} (const void $\ast$data, size\+\_\+t size)
+\item 
+virtual void \mbox{\hyperlink{classConnectionManager_a88633c426c967b62b2c4240b5cee8290}{receive\+Data}} (void $\ast$data, size\+\_\+t size)
+\item 
+virtual void \mbox{\hyperlink{classConnectionManager_abec8650129510610afb8873544d343ae}{send\+String}} (const std\+::string \&str)
+\item 
+virtual std\+::string \mbox{\hyperlink{classConnectionManager_a86cf25baeb13b03524b62672a11f0ee5}{receive\+String}} (size\+\_\+t max\+\_\+length=1024)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classConnectionManager_a9548715ec6e2b25c4a404e0ae0caeb44}{socket\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classConnectionManager_af6b5b5fb637826dd73f6a20d9d51404d}{server\+\_\+addr\+\_\+}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classConnectionManager_abcc773c12476e73eeeecff810ad9fbc1}{port\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для управления TCP-\/соединением с сервером 
+
+Definition at line 21 of file connection\+\_\+manager.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConnectionManager_abf196969be8197358e3313314b9d91e3}\label{classConnectionManager_abf196969be8197358e3313314b9d91e3}} 
+\index{ConnectionManager@{ConnectionManager}!ConnectionManager@{ConnectionManager}}
+\index{ConnectionManager@{ConnectionManager}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{ConnectionManager()}{ConnectionManager()}}
+{\footnotesize\ttfamily Connection\+Manager\+::\+Connection\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{server\+\_\+addr,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file connection\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classConnectionManager_a5c2a49d02244fc399deba3ce6ffe77ac}\label{classConnectionManager_a5c2a49d02244fc399deba3ce6ffe77ac}} 
+\index{ConnectionManager@{ConnectionManager}!````~ConnectionManager@{$\sim$ConnectionManager}}
+\index{````~ConnectionManager@{$\sim$ConnectionManager}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConnectionManager()}{~ConnectionManager()}}
+{\footnotesize\ttfamily Connection\+Manager\+::$\sim$\+Connection\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 49 of file connection\+\_\+manager.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classConnectionManager_abe29edfc1c35f0ec66e882650a616c87}\label{classConnectionManager_abe29edfc1c35f0ec66e882650a616c87}} 
+\index{ConnectionManager@{ConnectionManager}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file connection\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classConnectionManager_a21073516e0de49c4133f2dad2adf4d82}\label{classConnectionManager_a21073516e0de49c4133f2dad2adf4d82}} 
+\index{ConnectionManager@{ConnectionManager}!processVectors@{processVectors}}
+\index{processVectors@{processVectors}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{processVectors()}{processVectors()}}
+{\footnotesize\ttfamily std\+::vector$<$ int32\+\_\+t $>$ Connection\+Manager\+::process\+Vectors (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ int32\+\_\+t $>$$>$ \&}]{vectors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file connection\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classConnectionManager_a88633c426c967b62b2c4240b5cee8290}\label{classConnectionManager_a88633c426c967b62b2c4240b5cee8290}} 
+\index{ConnectionManager@{ConnectionManager}!receiveData@{receiveData}}
+\index{receiveData@{receiveData}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{receiveData()}{receiveData()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::receive\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 111 of file connection\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classConnectionManager_a86cf25baeb13b03524b62672a11f0ee5}\label{classConnectionManager_a86cf25baeb13b03524b62672a11f0ee5}} 
+\index{ConnectionManager@{ConnectionManager}!receiveString@{receiveString}}
+\index{receiveString@{receiveString}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{receiveString()}{receiveString()}}
+{\footnotesize\ttfamily std\+::string Connection\+Manager\+::receive\+String (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{max\+\_\+length = {\ttfamily 1024} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 131 of file connection\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classConnectionManager_aac11236d653989216a87210412caeb0e}\label{classConnectionManager_aac11236d653989216a87210412caeb0e}} 
+\index{ConnectionManager@{ConnectionManager}!sendData@{sendData}}
+\index{sendData@{sendData}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::send\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 98 of file connection\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classConnectionManager_abec8650129510610afb8873544d343ae}\label{classConnectionManager_abec8650129510610afb8873544d343ae}} 
+\index{ConnectionManager@{ConnectionManager}!sendString@{sendString}}
+\index{sendString@{sendString}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{sendString()}{sendString()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::send\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 127 of file connection\+\_\+manager.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classConnectionManager_abcc773c12476e73eeeecff810ad9fbc1}\label{classConnectionManager_abcc773c12476e73eeeecff810ad9fbc1}} 
+\index{ConnectionManager@{ConnectionManager}!port\_@{port\_}}
+\index{port\_@{port\_}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{port\_}{port\_}}
+{\footnotesize\ttfamily uint16\+\_\+t Connection\+Manager\+::port\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file connection\+\_\+manager.\+h.
+
+\mbox{\Hypertarget{classConnectionManager_af6b5b5fb637826dd73f6a20d9d51404d}\label{classConnectionManager_af6b5b5fb637826dd73f6a20d9d51404d}} 
+\index{ConnectionManager@{ConnectionManager}!server\_addr\_@{server\_addr\_}}
+\index{server\_addr\_@{server\_addr\_}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{server\_addr\_}{server\_addr\_}}
+{\footnotesize\ttfamily std\+::string Connection\+Manager\+::server\+\_\+addr\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file connection\+\_\+manager.\+h.
+
+\mbox{\Hypertarget{classConnectionManager_a9548715ec6e2b25c4a404e0ae0caeb44}\label{classConnectionManager_a9548715ec6e2b25c4a404e0ae0caeb44}} 
+\index{ConnectionManager@{ConnectionManager}!socket\_@{socket\_}}
+\index{socket\_@{socket\_}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{socket\_}{socket\_}}
+{\footnotesize\ttfamily int Connection\+Manager\+::socket\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file connection\+\_\+manager.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{connection__manager_8h}{connection\+\_\+manager.\+h}}\item 
+src/\mbox{\hyperlink{connection__manager_8cpp}{connection\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}
