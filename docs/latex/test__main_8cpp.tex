@@ -30,11 +30,15 @@ struct \mbox{\hyperlink{structTestFileFixture}{Test\+File\+Fixture}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}{SUITE}} (User\+Interface\+Test)
-\item 
+\begin{DoxyCompactList}\small\item\em Тесты для класса \mbox{\hyperlink{classUserInterface}{User\+Interface}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{test__main_8cpp_ad978ef563c93ffa0a173a366ad758a94}{SUITE}} (File\+Handler\+Test)
-\item 
+\begin{DoxyCompactList}\small\item\em Тесты для класса \mbox{\hyperlink{classFileHandler}{File\+Handler}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{test__main_8cpp_a4359f8fbd30dad6a8405241476c861eb}{SUITE}} (Auth\+Manager\+Test)
-\item 
+\begin{DoxyCompactList}\small\item\em Тесты для класса \mbox{\hyperlink{classAuthManager}{Auth\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__main_8cpp_a062538dd2e7d0b517c254e158009700c}{SUITE}} (Integration\+Test)
+\begin{DoxyCompactList}\small\item\em Интеграционные тесты \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__main_8cpp_afa2e9cc09ee8254e70a9a469df8da470}{SUITE}} (Error\+Handling\+Test)
+\begin{DoxyCompactList}\small\item\em Тесты обработки ошибок \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{test__main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \begin{DoxyCompactList}\small\item\em Главная функция тестов \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -42,19 +46,7 @@ int \mbox{\hyperlink{test__main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} (
 \doxysubsection{Detailed Description}
 Модульные тесты для клиентского приложения 
 
-\begin{DoxyAuthor}{Author}
-Пресняков А.\+А. 
-\end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
-1.\+0 
-\end{DoxyVersion}
-\begin{DoxyDate}{Date}
-28.\+10.\+2025 
-\end{DoxyDate}
-\begin{DoxyCopyright}{Copyright}
-ИБСТ ПГУ
-\end{DoxyCopyright}
-Содержит модульные тесты для всех компонентов системы\+:
+Содержит тесты для всех компонентов системы\+:
 \begin{DoxyItemize}
 \item \mbox{\hyperlink{classUserInterface}{User\+Interface}} (пользовательский интерфейс)
 \item \mbox{\hyperlink{classFileHandler}{File\+Handler}} (работа с файлами)
@@ -81,48 +73,207 @@ int \mbox{\hyperlink{test__main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} (
 Главная функция тестов 
 
 \begin{DoxyReturn}{Returns}
-Количество неудачных тестов (0 -\/ все тесты прошли)
+int Количество неудачных тестов (0 -\/ все тесты прошли)
 \end{DoxyReturn}
-Запускает все тесты и выводит результаты 
+Запускает все модульные тесты и выводит результаты 
 
-Definition at line 134 of file test\+\_\+main.\+cpp.
+Definition at line 656 of file test\+\_\+main.\+cpp.
 
 \mbox{\Hypertarget{test__main_8cpp_a4359f8fbd30dad6a8405241476c861eb}\label{test__main_8cpp_a4359f8fbd30dad6a8405241476c861eb}} 
 \index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
 \index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
-\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Auth\+Manager\+Test}]{ }\end{DoxyParamCaption})}
 
+
+
+Тесты для класса \mbox{\hyperlink{classAuthManager}{Auth\+Manager}}. 
+
 \begin{DoxyRefDesc}{Test}
-\item[\mbox{\hyperlink{test__test000003}{Test}}]Generate\+Salt\+Length \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{test__test000019}{Test}}]Suite Auth\+Manager\+Test \end{DoxyRefDesc}
+
+
+Проверяет криптографические функции аутентификации \begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000020}{Test}}]Generate\+Salt\+Length \end{DoxyRefDesc}
 Тест длины генерируемой соли
 
-Definition at line 114 of file test\+\_\+main.\+cpp.
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000021}{Test}}]Generate\+Salt\+Hex\+Format \end{DoxyRefDesc}
+Тест формата соли (шестнадцатеричные символы)
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000022}{Test}}]Generate\+Salt\+Unique \end{DoxyRefDesc}
+Тест уникальности соли
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000023}{Test}}]Compute\+Hash\+Consistent \end{DoxyRefDesc}
+Тест консистентности хеша
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000024}{Test}}]Compute\+Hash\+Different\+For\+Different\+Inputs \end{DoxyRefDesc}
+Тест разных хешей для разных паролей
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000025}{Test}}]Compute\+Hash\+Different\+For\+Different\+Salts \end{DoxyRefDesc}
+Тест разных хешей для разных солей
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000026}{Test}}]Compute\+Hash\+Format \end{DoxyRefDesc}
+Тест формата MD5 хеша
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000027}{Test}}]Compute\+Hash\+Known\+Value \end{DoxyRefDesc}
+Тест известного значения хеша
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000028}{Test}}]Compute\+Hash\+Special\+Characters \end{DoxyRefDesc}
+Тест хеша со специальными символами
+
+Definition at line 315 of file test\+\_\+main.\+cpp.
+
+\mbox{\Hypertarget{test__main_8cpp_afa2e9cc09ee8254e70a9a469df8da470}\label{test__main_8cpp_afa2e9cc09ee8254e70a9a469df8da470}} 
+\index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Error\+Handling\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Тесты обработки ошибок 
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000033}{Test}}]Suite Error\+Handling\+Test \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000034}{Test}}]File\+Read\+Errors \end{DoxyRefDesc}
+Тест ошибок чтения файлов
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000035}{Test}}]Invalid\+Vector\+Data \end{DoxyRefDesc}
+Тест неверных данных векторов
+
+Definition at line 613 of file test\+\_\+main.\+cpp.
 
 \mbox{\Hypertarget{test__main_8cpp_ad978ef563c93ffa0a173a366ad758a94}\label{test__main_8cpp_ad978ef563c93ffa0a173a366ad758a94}} 
 \index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
 \index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
-\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
 {\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{File\+Handler\+Test}]{ }\end{DoxyParamCaption})}
 
+
+
+Тесты для класса \mbox{\hyperlink{classFileHandler}{File\+Handler}}. 
+
 \begin{DoxyRefDesc}{Test}
-\item[\mbox{\hyperlink{test__test000002}{Test}}]Read\+Vectors\+Valid \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{test__test000008}{Test}}]Suite File\+Handler\+Test \end{DoxyRefDesc}
+
+
+Проверяет чтение и запись файлов \begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000009}{Test}}]Read\+Vectors\+Valid \end{DoxyRefDesc}
 Тест чтения корректного файла с векторами
 
-Definition at line 92 of file test\+\_\+main.\+cpp.
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000010}{Test}}]Read\+Vectors\+File\+Not\+Found \end{DoxyRefDesc}
+Тест чтения несуществующего файла
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000011}{Test}}]Save\+Results\+Valid \end{DoxyRefDesc}
+Тест сохранения результатов в двоичный файл
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000012}{Test}}]Save\+Results\+Empty \end{DoxyRefDesc}
+Тест сохранения пустых результатов
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000013}{Test}}]Read\+Config\+Valid \end{DoxyRefDesc}
+Тест чтения корректного конфигурационного файла
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000014}{Test}}]Read\+Config\+With\+Tilde \end{DoxyRefDesc}
+Тест чтения конфигурации с путем, содержащим тильду
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000015}{Test}}]Read\+Config\+Invalid\+Format \end{DoxyRefDesc}
+Тест чтения конфигурации с неверным форматом
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000016}{Test}}]Read\+Config\+Empty\+File \end{DoxyRefDesc}
+Тест чтения пустого конфигурационного файла
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000017}{Test}}]Read\+Config\+Only\+Login \end{DoxyRefDesc}
+Тест чтения конфигурации только с логином
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000018}{Test}}]Read\+Config\+Only\+Password \end{DoxyRefDesc}
+Тест чтения конфигурации только с паролем
+
+Definition at line 153 of file test\+\_\+main.\+cpp.
+
+\mbox{\Hypertarget{test__main_8cpp_a062538dd2e7d0b517c254e158009700c}\label{test__main_8cpp_a062538dd2e7d0b517c254e158009700c}} 
+\index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
+\index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{Integration\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Интеграционные тесты 
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000029}{Test}}]Suite Integration\+Test \end{DoxyRefDesc}
+
+
+Проверяет совместную работу компонентов \begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000030}{Test}}]File\+Read\+And\+Save\+Integration \end{DoxyRefDesc}
+Интеграционный тест чтения и сохранения файлов
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000031}{Test}}]Config\+And\+Auth\+Integration \end{DoxyRefDesc}
+Интеграционный тест конфигурации и аутентификации
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000032}{Test}}]Complete\+Workflow \end{DoxyRefDesc}
+Тест полного рабочего процесса
+
+Definition at line 481 of file test\+\_\+main.\+cpp.
 
 \mbox{\Hypertarget{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}\label{test__main_8cpp_a272cd10408b6db923d4b32b323207f5a}} 
 \index{test\_main.cpp@{test\_main.cpp}!SUITE@{SUITE}}
 \index{SUITE@{SUITE}!test\_main.cpp@{test\_main.cpp}}
-\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\doxysubsubsection{\texorpdfstring{SUITE()}{SUITE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
 {\footnotesize\ttfamily SUITE (\begin{DoxyParamCaption}\item[{User\+Interface\+Test}]{ }\end{DoxyParamCaption})}
 
+
+
+Тесты для класса \mbox{\hyperlink{classUserInterface}{User\+Interface}}. 
+
 \begin{DoxyRefDesc}{Test}
-\item[\mbox{\hyperlink{test__test000001}{Test}}]Help\+Short \end{DoxyRefDesc}
-Тест короткой формы справки (-\/h)\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{_2home_2stud_2client_project_2src_2test_main_8cpp-example}{/home/stud/client\+\_\+project/src/test\+\_\+main.\+cpp}}.\end{Desc}
+\item[\mbox{\hyperlink{test__test000001}{Test}}]Suite User\+Interface\+Test \end{DoxyRefDesc}
 
 
-Definition at line 36 of file test\+\_\+main.\+cpp.
+Проверяет разбор параметров командной строки \begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000002}{Test}}]Help\+Short \end{DoxyRefDesc}
+Тест короткой формы справки (-\/h)
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000003}{Test}}]Help\+Long \end{DoxyRefDesc}
+Тест длинной формы справки (--help)
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000004}{Test}}]Valid\+Parameters \end{DoxyRefDesc}
+Тест корректных параметров командной строки
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000005}{Test}}]Missing\+Required\+Parameters \end{DoxyRefDesc}
+Тест отсутствия обязательных параметров
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000006}{Test}}]Default\+Values \end{DoxyRefDesc}
+Тест значений по умолчанию
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000007}{Test}}]Help\+With\+Other\+Parameters \end{DoxyRefDesc}
+Тест комбинации -\/h с другими параметрами
+
+Definition at line 29 of file test\+\_\+main.\+cpp.
 
