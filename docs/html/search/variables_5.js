@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['test_5ffilename_99',['test_filename',['../structTestFileFixture.html#aec7f3f16e4af2cba18c40c19f9ae1d76',1,'TestFileFixture']]],
-  ['test_5foutput_100',['test_output',['../structTestFileFixture.html#a841a8ec3123242db56ee2dfb654d7596',1,'TestFileFixture']]]
+  ['server_5faddr_5f_88',['server_addr_',['../classConnectionManager.html#af6b5b5fb637826dd73f6a20d9d51404d',1,'ConnectionManager']]],
+  ['server_5faddress_89',['server_address',['../structClientParams.html#a12a86ebc9457ab7b33deaaa1264327a6',1,'ClientParams']]],
+  ['socket_5f_90',['socket_',['../classConnectionManager.html#a9548715ec6e2b25c4a404e0ae0caeb44',1,'ConnectionManager']]]
 ];

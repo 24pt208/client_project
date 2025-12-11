@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['authmanager_50',['AuthManager',['../classAuthManager.html',1,'']]]
+  ['authmanager_44',['AuthManager',['../classAuthManager.html',1,'']]]
 ];

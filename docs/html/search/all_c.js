@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['user_5finterface_2ecpp_44',['user_interface.cpp',['../user__interface_8cpp.html',1,'']]],
-  ['user_5finterface_2eh_45',['user_interface.h',['../user__interface_8h.html',1,'']]],
-  ['userinterface_46',['UserInterface',['../classUserInterface.html',1,'UserInterface'],['../classUserInterface.html#ae6fb70370701b3bd6120e923df9705b0',1,'UserInterface::UserInterface()']]]
+  ['_7eauthmanager_41',['~AuthManager',['../classAuthManager.html#a4dc0675ca3f7e398a8140cc35d0530fb',1,'AuthManager']]],
+  ['_7econnectionmanager_42',['~ConnectionManager',['../classConnectionManager.html#a5c2a49d02244fc399deba3ce6ffe77ac',1,'ConnectionManager']]],
+  ['_7efilehandler_43',['~FileHandler',['../classFileHandler.html#a5470c1297f5f78ba0b6387e83b2a04db',1,'FileHandler']]]
 ];

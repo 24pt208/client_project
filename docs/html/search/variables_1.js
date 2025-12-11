@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['input_5ffile_92',['input_file',['../structClientParams.html#a01e357907518bd58cbd259c41e879b4b',1,'ClientParams']]]
+  ['desc_5f_82',['desc_',['../classUserInterface.html#af8e40087105d86d09b382d397524867d',1,'UserInterface']]]
 ];

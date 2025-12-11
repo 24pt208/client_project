@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2025.12.8)  11 DEC 2025 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2025.12.8)  11 DEC 2025 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,18 +1111,14 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 LaTeX Font Warning: Font shape `T2A/phv/b/n' undefined
 (Font)              using `T2A/phv/m/n' instead on input line 170.
 
-[1] [2]
 LaTeX Font Info:    Trying to load font information for T2A+pcr on input line 1
 70.
 LaTeX Font Info:    No file T2Apcr.fd. on input line 170.
 
-
 LaTeX Font Warning: Font shape `T2A/pcr/m/n' undefined
 (Font)              using `T2A/cmr/m/n' instead on input line 170.
 
-[3] [4
-
-]
+[1] [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 172.
 
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
@@ -1130,28 +1126,20 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 172.
 LaTeX Font Warning: Font shape `T2A/phv/bc/n' undefined
 (Font)              using `T2A/phv/m/n' instead on input line 175.
 
-(./md_README.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+(./annotated.tex) [1
 
- []
-
-) [1
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 179.
+(Font)              scaled to size 8.99994pt on input line 177.
  [2
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-(./annotated.tex) [3] [4
+(./files.tex) [3] [4
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-(./files.tex) [5] [6
-
-]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
 (./classAuthManager.tex
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
 5.
@@ -1164,25 +1152,46 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 
 
 LaTeX Font Warning: Font shape `T2A/pcr/m/it' undefined
-(Font)              using `T2A/pcr/m/n' instead on input line 29.
+(Font)              using `T2A/pcr/m/n' instead on input line 55.
 
-) (./structClientParams.tex [7]
+[5]) (./structClientParams.tex
 
 LaTeX Font Warning: Font shape `T2A/phv/m/it' undefined
 (Font)              using `T2A/phv/m/n' instead on input line 16.
 
-[8]) (./classConnectionManager.tex [9] [10]) (./classFileHandler.tex [11])
-(./structTestFileFixture.tex [12]) (./classUserInterface.tex [13] [14])
-[15] [16
+[6] [7]) (./classConnectionManager.tex [8] [9] [10]) (./classFileHandler.tex
+[11]
+
+LaTeX Font Warning: Font shape `T2A/pcr/b/n' undefined
+(Font)              using `T2A/pcr/m/n' instead on input line 45.
+
+[12]) (./classUserInterface.tex <./classUserInterface__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classUserInterface__coll__graph.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>
+<classUserInterface__coll__graph.pdf, id=625, 168.63pt x 167.62625pt>
+File: classUserInterface__coll__graph.pdf Graphic file (type pdf)
+<use classUserInterface__coll__graph.pdf>
+Package pdftex.def Info: classUserInterface__coll__graph.pdf  used on input lin
+e 19.
+(pdftex.def)             Requested size: 168.0pt x 167.00427pt.
+ [13]
+Underfull \hbox (badness 5064) in paragraph at lines 62--63
+[]\T2A/pcr/m/n/10 References Client[]Params[]::config[]_[]file, desc[]_[], Clie
+nt[]Params[]::input[]_[]file, Client[]Params[]::output[]_[]file,
+ []
+
+[14]) [15] [16
 
 ]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
-(./README_8md.tex) (./auth__manager_8cpp.tex <./auth__manager_8cpp__incl.pdf
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
+(./auth__manager_8cpp.tex <./auth__manager_8cpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./auth__manager_8cpp__incl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >
-<auth__manager_8cpp__incl.pdf, id=733, 733.74126pt x 212.795pt>
+<auth__manager_8cpp__incl.pdf, id=673, 733.74126pt x 212.795pt>
 File: auth__manager_8cpp__incl.pdf Graphic file (type pdf)
 <use auth__manager_8cpp__incl.pdf>
 Package pdftex.def Info: auth__manager_8cpp__incl.pdf  used on input line 20.
@@ -1192,21 +1201,21 @@ Package pdftex.def Info: auth__manager_8cpp__incl.pdf  used on input line 20.
 pdfTeX warning: pdflatex (file ./auth__manager_8h__incl.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >
-<auth__manager_8h__incl.pdf, id=741, 193.72375pt x 156.585pt>
+<auth__manager_8h__incl.pdf, id=681, 193.72375pt x 156.585pt>
 File: auth__manager_8h__incl.pdf Graphic file (type pdf)
 <use auth__manager_8h__incl.pdf>
 Package pdftex.def Info: auth__manager_8h__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 193.0pt x 156.00162pt.
  [17] <./auth__manager_8h__dep__incl.pdf>
-<auth__manager_8h__dep__incl.pdf, id=756, 500.87125pt x 156.585pt>
+<auth__manager_8h__dep__incl.pdf, id=695, 379.4175pt x 156.585pt>
 File: auth__manager_8h__dep__incl.pdf Graphic file (type pdf)
 <use auth__manager_8h__dep__incl.pdf>
 Package pdftex.def Info: auth__manager_8h__dep__incl.pdf  used on input line 22
 .
-(pdftex.def)             Requested size: 350.0pt x 109.42238pt.
+(pdftex.def)             Requested size: 350.0pt x 144.447pt.
 ) (./connection__manager_8cpp.tex
 [18] <./connection__manager_8cpp__incl.pdf>
-<connection__manager_8cpp__incl.pdf, id=776, 798.985pt x 212.795pt>
+<connection__manager_8cpp__incl.pdf, id=715, 798.985pt x 212.795pt>
 File: connection__manager_8cpp__incl.pdf Graphic file (type pdf)
 <use connection__manager_8cpp__incl.pdf>
 Package pdftex.def Info: connection__manager_8cpp__incl.pdf  used on input line
@@ -1217,7 +1226,7 @@ Package pdftex.def Info: connection__manager_8cpp__incl.pdf  used on input line
 pdfTeX warning: pdflatex (file ./connection__manager_8h__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<connection__manager_8h__incl.pdf, id=784, 798.985pt x 156.585pt>
+<connection__manager_8h__incl.pdf, id=723, 798.985pt x 156.585pt>
 File: connection__manager_8h__incl.pdf Graphic file (type pdf)
 <use connection__manager_8h__incl.pdf>
 Package pdftex.def Info: connection__manager_8h__incl.pdf  used on input line 2
@@ -1228,21 +1237,21 @@ Package pdftex.def Info: connection__manager_8h__incl.pdf  used on input line 2
 pdfTeX warning: pdflatex (file ./connection__manager_8h__dep__incl.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<connection__manager_8h__dep__incl.pdf, id=792, 333.245pt x 156.585pt>
+<connection__manager_8h__dep__incl.pdf, id=731, 333.245pt x 156.585pt>
 File: connection__manager_8h__dep__incl.pdf Graphic file (type pdf)
 <use connection__manager_8h__dep__incl.pdf>
 Package pdftex.def Info: connection__manager_8h__dep__incl.pdf  used on input l
 ine 30.
 (pdftex.def)             Requested size: 332.0pt x 156.01117pt.
  [19]) (./file__handler_8cpp.tex <./file__handler_8cpp__incl.pdf>
-<file__handler_8cpp__incl.pdf, id=810, 537.00626pt x 212.795pt>
+<file__handler_8cpp__incl.pdf, id=747, 537.00626pt x 212.795pt>
 File: file__handler_8cpp__incl.pdf Graphic file (type pdf)
 <use file__handler_8cpp__incl.pdf>
 Package pdftex.def Info: file__handler_8cpp__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 138.69174pt.
 )
 (./file__handler_8h.tex [20] <./file__handler_8h__incl.pdf>
-<file__handler_8h__incl.pdf, id=833, 514.92375pt x 156.585pt>
+<file__handler_8h__incl.pdf, id=770, 514.92375pt x 156.585pt>
 File: file__handler_8h__incl.pdf Graphic file (type pdf)
 <use file__handler_8h__incl.pdf>
 Package pdftex.def Info: file__handler_8h__incl.pdf  used on input line 19.
@@ -1252,111 +1261,110 @@ Package pdftex.def Info: file__handler_8h__incl.pdf  used on input line 19.
 pdfTeX warning: pdflatex (file ./file__handler_8h__dep__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<file__handler_8h__dep__incl.pdf, id=848, 410.53375pt x 156.585pt>
+<file__handler_8h__dep__incl.pdf, id=785, 289.08pt x 156.585pt>
 File: file__handler_8h__dep__incl.pdf Graphic file (type pdf)
 <use file__handler_8h__dep__incl.pdf>
 Package pdftex.def Info: file__handler_8h__dep__incl.pdf  used on input line 27
 .
-(pdftex.def)             Requested size: 350.0pt x 133.49449pt.
+(pdftex.def)             Requested size: 288.0pt x 156.00879pt.
 ) (./main_8cpp.tex <./main_8cpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./main_8cpp__incl.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >
-<main_8cpp__incl.pdf, id=864, 1108.14pt x 212.795pt>
+<main_8cpp__incl.pdf, id=802, 1108.14pt x 212.795pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 <use main_8cpp__incl.pdf>
-Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 20.
+Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 67.20935pt.
- [21]
-Overfull \vbox (7.33794pt too high) has occurred while \output is active []
-
-
-[22]
-Underfull \hbox (badness 10000) detected at line 106
+ [21] [22]
+Underfull \hbox (badness 10000) detected at line 52
 [][][]
  []
 
-) (./test__main_8cpp.tex <./test__main_8cpp__incl.pdf>
-<test__main_8cpp__incl.pdf, id=903, 814.04124pt x 212.795pt>
-File: test__main_8cpp__incl.pdf Graphic file (type pdf)
-<use test__main_8cpp__incl.pdf>
-Package pdftex.def Info: test__main_8cpp__incl.pdf  used on input line 16.
-(pdftex.def)             Requested size: 350.0pt x 91.49031pt.
- [23]
 
-LaTeX Font Warning: Font shape `T2A/pcr/b/n' undefined
-(Font)              using `T2A/pcr/m/n' instead on input line 51.
+Underfull \hbox (badness 2111) in paragraph at lines 61--62
+[]\T2A/phv/bc/n/10 References Connection[]Manager[]::authenticate(), User[]Inte
+rface[]::get[]Help(), User[]Interface[]::get[]Params(),
+ []
 
-[24]) (./user__interface_8cpp.tex <./user__interface_8cpp__incl.pdf>
-<user__interface_8cpp__incl.pdf, id=947, 360.34625pt x 212.795pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\T2A/phv/bc/n/10 User[]Interface[]::parse[]Arguments(), Connection[]Manager[]::
+process[]Vectors(), File[]Handler[]::read[]Config(),
+ []
+
+) (./user__interface_8cpp.tex <./user__interface_8cpp__incl.pdf>
+<user__interface_8cpp__incl.pdf, id=836, 360.34625pt x 212.795pt>
 File: user__interface_8cpp__incl.pdf Graphic file (type pdf)
 <use user__interface_8cpp__incl.pdf>
 Package pdftex.def Info: user__interface_8cpp__incl.pdf  used on input line 16.
 
 (pdftex.def)             Requested size: 350.0pt x 206.68362pt.
 )
-(./user__interface_8h.tex [25] <./user__interface_8h__incl.pdf>
-<user__interface_8h__incl.pdf, id=962, 293.095pt x 156.585pt>
+(./user__interface_8h.tex <./user__interface_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./user__interface_8h__incl.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<user__interface_8h__incl.pdf, id=844, 293.095pt x 156.585pt>
 File: user__interface_8h__incl.pdf Graphic file (type pdf)
 <use user__interface_8h__incl.pdf>
 Package pdftex.def Info: user__interface_8h__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 292.0pt x 155.99922pt.
- <./user__interface_8h__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./user__interface_8h__dep__incl.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->
-<user__interface_8h__dep__incl.pdf, id=970, 424.58624pt x 156.585pt>
+ [23] <./user__interface_8h__dep__incl.pdf>
+<user__interface_8h__dep__incl.pdf, id=858, 302.12875pt x 156.585pt>
 File: user__interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use user__interface_8h__dep__incl.pdf>
 Package pdftex.def Info: user__interface_8h__dep__incl.pdf  used on input line 
 23.
-(pdftex.def)             Requested size: 350.0pt x 129.08386pt.
-) [26] (./refman.ind
-Overfull \hbox (18.15736pt too wide) in paragraph at lines 11--12
+(pdftex.def)             Requested size: 301.0pt x 155.99922pt.
+) [24] (./refman.ind
+Overfull \hbox (18.15736pt too wide) in paragraph at lines 13--14
 []| \T2A/phv/bc/n/10 CRYPTOPP_ENABLE_NAMESPACE_WEAK,
  []
 
-[27
+[25
 
 
 
-] [28
+] [26
 
 ]) (./refman.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 8F67826699CEE495158DFA5C28A0A48D;20210.
+(rerunfilecheck)             Checksum: 3C2DD3BAAE419AE2E4CBF8E15687DCBD;17023.
  ) 
 Here is how much of TeX's memory you used:
- 18575 strings out of 480726
- 276216 string characters out of 5907434
- 625138 words of memory out of 5000000
- 34860 multiletter control sequences out of 15000+600000
+ 18494 strings out of 480726
+ 274672 string characters out of 5907434
+ 619737 words of memory out of 5000000
+ 34824 multiletter control sequences out of 15000+600000
  421462 words of font info for 66 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 112i,16n,117p,428b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 112i,16n,117p,413b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/stud/.texlive2020/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0900.600pk>
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/stud/.texliv
 e2020/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2488.600pk> </home/stud/.texlive2
 020/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk> </home/stud/.texlive202
-0/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/stud/.texlive2020/
-texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0700.600pk>{/usr/share/texmf/fonts/enc/
+0/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0700.600pk> </home/stud/.texlive2020/
+texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk>{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t2a.enc} </home/stud/.texlive2020/texmf-var/fonts/pk/lj
 four/lh/lh-t2a/larm1200.600pk> </home/stud/.texlive2020/texmf-var/fonts/pk/ljfo
 ur/lh/lh-t2a/larm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on refman.pdf (34 pages, 315605 bytes).
+s/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on refman.pdf (30 pages, 306858 bytes).
 PDF statistics:
- 1456 PDF objects out of 1728 (max. 8388607)
- 1068 compressed objects within 11 object streams
- 225 named destinations out of 1000 (max. 500000)
- 871 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1299 PDF objects out of 1440 (max. 8388607)
+ 947 compressed objects within 10 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 759 words of extra memory for PDF output out of 10000 (max. 10000000)
 

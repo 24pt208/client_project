@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['server_5faddr_5f_96',['server_addr_',['../classConnectionManager.html#af6b5b5fb637826dd73f6a20d9d51404d',1,'ConnectionManager']]],
-  ['server_5faddress_97',['server_address',['../structClientParams.html#a12a86ebc9457ab7b33deaaa1264327a6',1,'ClientParams']]],
-  ['socket_5f_98',['socket_',['../classConnectionManager.html#a9548715ec6e2b25c4a404e0ae0caeb44',1,'ConnectionManager']]]
+  ['params_5f_85',['params_',['../classUserInterface.html#adf808152ef245cd2d1674df87555428d',1,'UserInterface']]],
+  ['port_86',['port',['../structClientParams.html#a625723918321c4bd187b86d06929214b',1,'ClientParams']]],
+  ['port_5f_87',['port_',['../classConnectionManager.html#abcc773c12476e73eeeecff810ad9fbc1',1,'ConnectionManager']]]
 ];

@@ -16,10 +16,36 @@ static std\+::string \mbox{\hyperlink{classAuthManager_a6bf14f0993a741b3f3c7c1da
 \item 
 static std\+::string \mbox{\hyperlink{classAuthManager_a947b6046a47f67804e2a0114103bb0c7}{compute\+Hash}} (const std\+::string \&salt, const std\+::string \&password)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAuthManager_a625c6cfdfc4e434abaff2ddebdd29374}{Auth\+Manager}} ()=delete
+\item 
+\mbox{\hyperlink{classAuthManager_a4dc0675ca3f7e398a8140cc35d0530fb}{$\sim$\+Auth\+Manager}} ()=delete
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Статический класс для криптографических операций 
+
+Definition at line 15 of file auth\+\_\+manager.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAuthManager_a625c6cfdfc4e434abaff2ddebdd29374}\label{classAuthManager_a625c6cfdfc4e434abaff2ddebdd29374}} 
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{AuthManager()}{AuthManager()}}
+{\footnotesize\ttfamily Auth\+Manager\+::\+Auth\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classAuthManager_a4dc0675ca3f7e398a8140cc35d0530fb}\label{classAuthManager_a4dc0675ca3f7e398a8140cc35d0530fb}} 
+\index{AuthManager@{AuthManager}!````~AuthManager@{$\sim$AuthManager}}
+\index{````~AuthManager@{$\sim$AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$AuthManager()}{~AuthManager()}}
+{\footnotesize\ttfamily Auth\+Manager\+::$\sim$\+Auth\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classAuthManager_a947b6046a47f67804e2a0114103bb0c7}\label{classAuthManager_a947b6046a47f67804e2a0114103bb0c7}} 
@@ -28,11 +54,27 @@ static std\+::string \mbox{\hyperlink{classAuthManager_a947b6046a47f67804e2a0114
 \doxysubsubsection{\texorpdfstring{computeHash()}{computeHash()}}
 {\footnotesize\ttfamily std\+::string Auth\+Manager\+::compute\+Hash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Definition at line 26 of file auth\+\_\+manager.\+cpp.
+
+
+
+Referenced by Connection\+Manager\+::authenticate().
+
 \mbox{\Hypertarget{classAuthManager_a6bf14f0993a741b3f3c7c1da298cddaf}\label{classAuthManager_a6bf14f0993a741b3f3c7c1da298cddaf}} 
 \index{AuthManager@{AuthManager}!generateSalt@{generateSalt}}
 \index{generateSalt@{generateSalt}!AuthManager@{AuthManager}}
 \doxysubsubsection{\texorpdfstring{generateSalt()}{generateSalt()}}
 {\footnotesize\ttfamily std\+::string Auth\+Manager\+::generate\+Salt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 16 of file auth\+\_\+manager.\+cpp.
+
+
+
+Referenced by Connection\+Manager\+::authenticate().
 
 
 

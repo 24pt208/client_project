@@ -1,163 +1,149 @@
 \begin{theindex}
 
+  \item {$\sim$AuthManager}
+    \subitem {AuthManager}, \hyperpage{5}
   \item {$\sim$ConnectionManager}
-    \subitem {ConnectionManager}, \hyperpage{10}
-  \item {$\sim$TestFileFixture}
-    \subitem {TestFileFixture}, \hyperpage{13}
+    \subitem {ConnectionManager}, \hyperpage{9}
+  \item {$\sim$FileHandler}
+    \subitem {FileHandler}, \hyperpage{12}
 
   \indexspace
 
   \item {auth\_manager.h}
     \subitem {CRYPTOPP\_ENABLE\_NAMESPACE\_WEAK}, \hyperpage{18}
   \item {authenticate}
-    \subitem {ConnectionManager}, \hyperpage{10}
-  \item {AuthManager}, \hyperpage{7}
-    \subitem {computeHash}, \hyperpage{7}
-    \subitem {generateSalt}, \hyperpage{7}
+    \subitem {ConnectionManager}, \hyperpage{9}
+  \item {AuthManager}, \hyperpage{5}
+    \subitem {$\sim$AuthManager}, \hyperpage{5}
+    \subitem {AuthManager}, \hyperpage{5}
+    \subitem {computeHash}, \hyperpage{6}
+    \subitem {generateSalt}, \hyperpage{6}
 
   \indexspace
 
-  \item {ClientParams}, \hyperpage{8}
-    \subitem {config\_file}, \hyperpage{8}
-    \subitem {input\_file}, \hyperpage{8}
-    \subitem {output\_file}, \hyperpage{8}
-    \subitem {port}, \hyperpage{9}
-    \subitem {server\_address}, \hyperpage{9}
+  \item {ClientParams}, \hyperpage{6}
+    \subitem {config\_file}, \hyperpage{7}
+    \subitem {input\_file}, \hyperpage{7}
+    \subitem {output\_file}, \hyperpage{7}
+    \subitem {port}, \hyperpage{7}
+    \subitem {server\_address}, \hyperpage{8}
   \item {computeHash}
-    \subitem {AuthManager}, \hyperpage{7}
+    \subitem {AuthManager}, \hyperpage{6}
   \item {config\_file}
-    \subitem {ClientParams}, \hyperpage{8}
-  \item {ConnectionManager}, \hyperpage{9}
-    \subitem {$\sim$ConnectionManager}, \hyperpage{10}
-    \subitem {authenticate}, \hyperpage{10}
-    \subitem {ConnectionManager}, \hyperpage{10}
+    \subitem {ClientParams}, \hyperpage{7}
+  \item {ConnectionManager}, \hyperpage{8}
+    \subitem {$\sim$ConnectionManager}, \hyperpage{9}
+    \subitem {authenticate}, \hyperpage{9}
+    \subitem {ConnectionManager}, \hyperpage{9}
     \subitem {port\_}, \hyperpage{11}
-    \subitem {processVectors}, \hyperpage{10}
+    \subitem {processVectors}, \hyperpage{9}
     \subitem {receiveData}, \hyperpage{10}
-    \subitem {receiveString}, \hyperpage{11}
-    \subitem {sendData}, \hyperpage{11}
-    \subitem {sendString}, \hyperpage{11}
+    \subitem {receiveString}, \hyperpage{10}
+    \subitem {sendData}, \hyperpage{10}
+    \subitem {sendString}, \hyperpage{10}
     \subitem {server\_addr\_}, \hyperpage{11}
     \subitem {socket\_}, \hyperpage{11}
-  \item {createConfigFile}
-    \subitem {main.cpp}, \hyperpage{22}
-  \item {createDemoInputFile}
-    \subitem {main.cpp}, \hyperpage{23}
   \item {CRYPTOPP\_ENABLE\_NAMESPACE\_WEAK}
     \subitem {auth\_manager.h}, \hyperpage{18}
 
   \indexspace
 
-  \item {ensureFilesExist}
-    \subitem {main.cpp}, \hyperpage{23}
+  \item {desc\_}
+    \subitem {UserInterface}, \hyperpage{15}
 
   \indexspace
 
   \item {FileHandler}, \hyperpage{12}
-    \subitem {readConfig}, \hyperpage{12}
-    \subitem {readVectors}, \hyperpage{12}
-    \subitem {saveResults}, \hyperpage{12}
+    \subitem {$\sim$FileHandler}, \hyperpage{12}
+    \subitem {FileHandler}, \hyperpage{12}
+    \subitem {operator=}, \hyperpage{13}
+    \subitem {readConfig}, \hyperpage{13}
+    \subitem {readVectors}, \hyperpage{13}
+    \subitem {saveResults}, \hyperpage{13}
 
   \indexspace
 
   \item {generateSalt}
-    \subitem {AuthManager}, \hyperpage{7}
+    \subitem {AuthManager}, \hyperpage{6}
   \item {getHelp}
-    \subitem {UserInterface}, \hyperpage{14}
+    \subitem {UserInterface}, \hyperpage{15}
   \item {getParams}
-    \subitem {UserInterface}, \hyperpage{14}
+    \subitem {UserInterface}, \hyperpage{15}
 
   \indexspace
 
   \item {input\_file}
-    \subitem {ClientParams}, \hyperpage{8}
+    \subitem {ClientParams}, \hyperpage{7}
 
   \indexspace
 
   \item {main}
-    \subitem {main.cpp}, \hyperpage{23}
-    \subitem {test\_main.cpp}, \hyperpage{24}
+    \subitem {main.cpp}, \hyperpage{22}
   \item {main.cpp}
-    \subitem {createConfigFile}, \hyperpage{22}
-    \subitem {createDemoInputFile}, \hyperpage{23}
-    \subitem {ensureFilesExist}, \hyperpage{23}
-    \subitem {main}, \hyperpage{23}
+    \subitem {main}, \hyperpage{22}
 
   \indexspace
 
+  \item {operator=}
+    \subitem {FileHandler}, \hyperpage{13}
   \item {output\_file}
-    \subitem {ClientParams}, \hyperpage{8}
+    \subitem {ClientParams}, \hyperpage{7}
 
   \indexspace
 
+  \item {params\_}
+    \subitem {UserInterface}, \hyperpage{15}
   \item {parseArguments}
     \subitem {UserInterface}, \hyperpage{15}
   \item {port}
-    \subitem {ClientParams}, \hyperpage{9}
+    \subitem {ClientParams}, \hyperpage{7}
   \item {port\_}
     \subitem {ConnectionManager}, \hyperpage{11}
   \item {processVectors}
-    \subitem {ConnectionManager}, \hyperpage{10}
+    \subitem {ConnectionManager}, \hyperpage{9}
 
   \indexspace
 
   \item {readConfig}
-    \subitem {FileHandler}, \hyperpage{12}
-  \item {README.md}, \hyperpage{17}
+    \subitem {FileHandler}, \hyperpage{13}
   \item {readVectors}
-    \subitem {FileHandler}, \hyperpage{12}
+    \subitem {FileHandler}, \hyperpage{13}
   \item {receiveData}
     \subitem {ConnectionManager}, \hyperpage{10}
   \item {receiveString}
-    \subitem {ConnectionManager}, \hyperpage{11}
+    \subitem {ConnectionManager}, \hyperpage{10}
 
   \indexspace
 
   \item {saveResults}
-    \subitem {FileHandler}, \hyperpage{12}
+    \subitem {FileHandler}, \hyperpage{13}
   \item {sendData}
-    \subitem {ConnectionManager}, \hyperpage{11}
+    \subitem {ConnectionManager}, \hyperpage{10}
   \item {sendString}
-    \subitem {ConnectionManager}, \hyperpage{11}
+    \subitem {ConnectionManager}, \hyperpage{10}
   \item {server\_addr\_}
     \subitem {ConnectionManager}, \hyperpage{11}
   \item {server\_address}
-    \subitem {ClientParams}, \hyperpage{9}
+    \subitem {ClientParams}, \hyperpage{8}
   \item {socket\_}
     \subitem {ConnectionManager}, \hyperpage{11}
   \item {src/auth\_manager.cpp}, \hyperpage{17}
-  \item {src/auth\_manager.h}, \hyperpage{18}
+  \item {src/auth\_manager.h}, \hyperpage{17}
   \item {src/connection\_manager.cpp}, \hyperpage{19}
   \item {src/connection\_manager.h}, \hyperpage{19}
   \item {src/file\_handler.cpp}, \hyperpage{20}
   \item {src/file\_handler.h}, \hyperpage{21}
   \item {src/main.cpp}, \hyperpage{22}
-  \item {src/test\_main.cpp}, \hyperpage{24}
-  \item {src/user\_interface.cpp}, \hyperpage{25}
-  \item {src/user\_interface.h}, \hyperpage{26}
-  \item {SUITE}
-    \subitem {test\_main.cpp}, \hyperpage{24, 25}
-
-  \indexspace
-
-  \item {test\_filename}
-    \subitem {TestFileFixture}, \hyperpage{13}
-  \item {test\_main.cpp}
-    \subitem {main}, \hyperpage{24}
-    \subitem {SUITE}, \hyperpage{24, 25}
-  \item {test\_output}
-    \subitem {TestFileFixture}, \hyperpage{13}
-  \item {TestFileFixture}, \hyperpage{13}
-    \subitem {$\sim$TestFileFixture}, \hyperpage{13}
-    \subitem {test\_filename}, \hyperpage{13}
-    \subitem {test\_output}, \hyperpage{13}
-    \subitem {TestFileFixture}, \hyperpage{13}
+  \item {src/user\_interface.cpp}, \hyperpage{23}
+  \item {src/user\_interface.h}, \hyperpage{23}
 
   \indexspace
 
   \item {UserInterface}, \hyperpage{14}
-    \subitem {getHelp}, \hyperpage{14}
-    \subitem {getParams}, \hyperpage{14}
+    \subitem {desc\_}, \hyperpage{15}
+    \subitem {getHelp}, \hyperpage{15}
+    \subitem {getParams}, \hyperpage{15}
+    \subitem {params\_}, \hyperpage{15}
     \subitem {parseArguments}, \hyperpage{15}
     \subitem {UserInterface}, \hyperpage{14}
 

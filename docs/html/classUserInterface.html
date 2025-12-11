@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +28,7 @@
    <div id="projectname">Сетевой клиент
    &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Клиент для обработки векторов на сервере</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +51,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classUserInterface.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,10 +82,10 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classUserInterface-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UserInterface Class Reference</div>  </div>
@@ -74,6 +96,15 @@ $(function() {
  <a href="classUserInterface.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="user__interface_8h_source.html">user_interface.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for UserInterface:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUserInterface__coll__graph.png" border="0" usemap="#aUserInterface_coll__map" alt="Collaboration graph"/></div>
+<map name="aUserInterface_coll__map" id="aUserInterface_coll__map">
+<area shape="rect" title="Класс для обработки параметров командной строки" alt="" coords="5,95,116,121"/>
+<area shape="rect" href="structClientParams.html" title="Структура для хранения параметров клиента" alt="" coords="7,5,115,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -85,9 +116,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae8fa642b7277cf9cdc3ecae9aff7dfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f30f53c4bc3fa72e84fc9d4cabfa2d0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserInterface.html#a6f30f53c4bc3fa72e84fc9d4cabfa2d0">getHelp</a> () const</td></tr>
 <tr class="separator:a6f30f53c4bc3fa72e84fc9d4cabfa2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af8e40087105d86d09b382d397524867d"><td class="memItemLeft" align="right" valign="top">boost::program_options::options_description&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserInterface.html#af8e40087105d86d09b382d397524867d">desc_</a></td></tr>
+<tr class="separator:af8e40087105d86d09b382d397524867d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf808152ef245cd2d1674df87555428d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structClientParams.html">ClientParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUserInterface.html#adf808152ef245cd2d1674df87555428d">params_</a></td></tr>
+<tr class="separator:adf808152ef245cd2d1674df87555428d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Класс для обработки параметров командной строки </p>
+
+<p class="definition">Definition at line <a class="el" href="user__interface_8h_source.html#l00026">26</a> of file <a class="el" href="user__interface_8h_source.html">user_interface.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae6fb70370701b3bd6120e923df9705b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6fb70370701b3bd6120e923df9705b0">&#9670;&nbsp;</a></span>UserInterface()</h2>
@@ -103,6 +143,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="user__interface_8cpp_source.html#l00010">10</a> of file <a class="el" href="user__interface_8cpp_source.html">user_interface.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="user__interface_8h_source.html#l00019">ClientParams::config_file</a>, <a class="el" href="user__interface_8h_source.html#l00034">desc_</a>, <a class="el" href="user__interface_8h_source.html#l00017">ClientParams::input_file</a>, <a class="el" href="user__interface_8h_source.html#l00018">ClientParams::output_file</a>, <a class="el" href="user__interface_8h_source.html#l00035">params_</a>, <a class="el" href="user__interface_8h_source.html#l00016">ClientParams::port</a>, and <a class="el" href="user__interface_8h_source.html#l00015">ClientParams::server_address</a>.</p>
 
 </div>
 </div>
@@ -121,6 +165,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="user__interface_8cpp_source.html#l00055">55</a> of file <a class="el" href="user__interface_8cpp_source.html">user_interface.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="user__interface_8h_source.html#l00034">desc_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00019">main()</a>.</p>
 
 </div>
 </div>
@@ -146,6 +196,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="user__interface_8h_source.html#l00030">30</a> of file <a class="el" href="user__interface_8h_source.html">user_interface.h</a>.</p>
+
+<p class="reference">References <a class="el" href="user__interface_8h_source.html#l00035">params_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00019">main()</a>.</p>
 
 </div>
 </div>
@@ -175,16 +231,79 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="user__interface_8cpp_source.html#l00020">20</a> of file <a class="el" href="user__interface_8cpp_source.html">user_interface.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="user__interface_8h_source.html#l00034">desc_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00019">main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af8e40087105d86d09b382d397524867d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e40087105d86d09b382d397524867d">&#9670;&nbsp;</a></span>desc_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::program_options::options_description UserInterface::desc_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="user__interface_8h_source.html#l00034">34</a> of file <a class="el" href="user__interface_8h_source.html">user_interface.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="user__interface_8cpp_source.html#l00055">getHelp()</a>, <a class="el" href="user__interface_8cpp_source.html#l00020">parseArguments()</a>, and <a class="el" href="user__interface_8cpp_source.html#l00010">UserInterface()</a>.</p>
+
+</div>
+</div>
+<a id="adf808152ef245cd2d1674df87555428d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf808152ef245cd2d1674df87555428d">&#9670;&nbsp;</a></span>params_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structClientParams.html">ClientParams</a> UserInterface::params_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="user__interface_8h_source.html#l00035">35</a> of file <a class="el" href="user__interface_8h_source.html">user_interface.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="user__interface_8h_source.html#l00030">getParams()</a>, and <a class="el" href="user__interface_8cpp_source.html#l00010">UserInterface()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="user__interface_8h_source.html">user_interface.h</a></li>
-<li>src/<a class="el" href="user__interface_8cpp.html">user_interface.cpp</a></li>
+<li>src/<a class="el" href="user__interface_8cpp_source.html">user_interface.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUserInterface.html">UserInterface</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,99 +1,85 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \babel@toc {russian}{}
-\contentsline {chapter}{\numberline {1}Создание Создание демо файлов}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Проверка справки (высший приоритет)}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}В отдельном терминале запустите сервер}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Запуск клиента}{1}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Запуск тестов}{1}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Опции}{1}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
-\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{7}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{7}{subsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}computeHash()}{7}{subsubsection.4.1.2.1}%
-\contentsline {subsubsection}{\numberline {4.1.2.2}generateSalt()}{7}{subsubsection.4.1.2.2}%
-\contentsline {section}{\numberline {4.2}Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Params Struct Reference}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Member Data Documentation}{8}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}config\_file}{8}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}input\_file}{8}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}output\_file}{9}{subsubsection.4.2.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}port}{9}{subsubsection.4.2.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.2.5}server\_address}{9}{subsubsection.4.2.2.5}%
-\contentsline {section}{\numberline {4.3}Connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{9}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{10}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{10}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}ConnectionManager()}{10}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $ConnectionManager()}{10}{subsubsection.4.3.2.2}%
-\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{10}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}authenticate()}{10}{subsubsection.4.3.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.3.2}processVectors()}{10}{subsubsection.4.3.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3.3}receiveData()}{11}{subsubsection.4.3.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.4}receiveString()}{11}{subsubsection.4.3.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.3.5}sendData()}{11}{subsubsection.4.3.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.3.6}sendString()}{11}{subsubsection.4.3.3.6}%
-\contentsline {subsection}{\numberline {4.3.4}Member Data Documentation}{11}{subsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.4.1}port\_}{11}{subsubsection.4.3.4.1}%
-\contentsline {subsubsection}{\numberline {4.3.4.2}server\_addr\_}{11}{subsubsection.4.3.4.2}%
-\contentsline {subsubsection}{\numberline {4.3.4.3}socket\_}{12}{subsubsection.4.3.4.3}%
-\contentsline {section}{\numberline {4.4}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{12}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{12}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Member Function Documentation}{12}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}readConfig()}{12}{subsubsection.4.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}readVectors()}{12}{subsubsection.4.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.3}saveResults()}{13}{subsubsection.4.4.2.3}%
-\contentsline {section}{\numberline {4.5}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fixture Struct Reference}{13}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Constructor \& Destructor Documentation}{13}{subsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.1}TestFileFixture()}{13}{subsubsection.4.5.1.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}$\sim $TestFileFixture()}{13}{subsubsection.4.5.1.2}%
-\contentsline {subsection}{\numberline {4.5.2}Member Data Documentation}{13}{subsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}test\_filename}{13}{subsubsection.4.5.2.1}%
-\contentsline {subsubsection}{\numberline {4.5.2.2}test\_output}{14}{subsubsection.4.5.2.2}%
-\contentsline {section}{\numberline {4.6}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface Class Reference}{14}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{14}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Constructor \& Destructor Documentation}{14}{subsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}UserInterface()}{14}{subsubsection.4.6.2.1}%
-\contentsline {subsection}{\numberline {4.6.3}Member Function Documentation}{14}{subsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.3.1}getHelp()}{14}{subsubsection.4.6.3.1}%
-\contentsline {subsubsection}{\numberline {4.6.3.2}getParams()}{15}{subsubsection.4.6.3.2}%
-\contentsline {subsubsection}{\numberline {4.6.3.3}parseArguments()}{15}{subsubsection.4.6.3.3}%
-\contentsline {chapter}{\numberline {5}File Documentation}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{17}{section.5.1}%
-\contentsline {section}{\numberline {5.2}src/auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.cpp File Reference}{17}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{17}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}src/auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{18}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{18}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Macro Definition Documentation}{18}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}CRYPTOPP\_ENABLE\_NAMESPACE\_WEAK}{19}{subsubsection.5.3.2.1}%
-\contentsline {section}{\numberline {5.4}src/connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.cpp File Reference}{19}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{19}{subsection.5.4.1}%
-\contentsline {section}{\numberline {5.5}src/connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{19}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{20}{subsection.5.5.1}%
-\contentsline {section}{\numberline {5.6}src/file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.cpp File Reference}{20}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{20}{subsection.5.6.1}%
-\contentsline {section}{\numberline {5.7}src/file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.h File Reference}{21}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{21}{subsection.5.7.1}%
-\contentsline {section}{\numberline {5.8}src/main.cpp File Reference}{22}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{22}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Function Documentation}{22}{subsection.5.8.2}%
-\contentsline {subsubsection}{\numberline {5.8.2.1}createConfigFile()}{22}{subsubsection.5.8.2.1}%
-\contentsline {subsubsection}{\numberline {5.8.2.2}createDemoInputFile()}{23}{subsubsection.5.8.2.2}%
-\contentsline {subsubsection}{\numberline {5.8.2.3}ensureFilesExist()}{23}{subsubsection.5.8.2.3}%
-\contentsline {subsubsection}{\numberline {5.8.2.4}main()}{23}{subsubsection.5.8.2.4}%
-\contentsline {section}{\numberline {5.9}src/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.cpp File Reference}{24}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Function Documentation}{24}{subsection.5.9.1}%
-\contentsline {subsubsection}{\numberline {5.9.1.1}main()}{24}{subsubsection.5.9.1.1}%
-\contentsline {subsubsection}{\numberline {5.9.1.2}SUITE()\hspace {0.1cm}{\footnotesize \ttfamily [1/5]}}{24}{subsubsection.5.9.1.2}%
-\contentsline {subsubsection}{\numberline {5.9.1.3}SUITE()\hspace {0.1cm}{\footnotesize \ttfamily [2/5]}}{25}{subsubsection.5.9.1.3}%
-\contentsline {subsubsection}{\numberline {5.9.1.4}SUITE()\hspace {0.1cm}{\footnotesize \ttfamily [3/5]}}{25}{subsubsection.5.9.1.4}%
-\contentsline {subsubsection}{\numberline {5.9.1.5}SUITE()\hspace {0.1cm}{\footnotesize \ttfamily [4/5]}}{25}{subsubsection.5.9.1.5}%
-\contentsline {subsubsection}{\numberline {5.9.1.6}SUITE()\hspace {0.1cm}{\footnotesize \ttfamily [5/5]}}{25}{subsubsection.5.9.1.6}%
-\contentsline {section}{\numberline {5.10}src/user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.cpp File Reference}{25}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{26}{subsection.5.10.1}%
-\contentsline {section}{\numberline {5.11}src/user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.h File Reference}{26}{section.5.11}%
-\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{26}{subsection.5.11.1}%
-\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{27}{section*.32}%
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}AuthManager()}{5}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}$\sim $AuthManager()}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}computeHash()}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}generateSalt()}{6}{subsubsection.3.1.3.2}%
+\contentsline {section}{\numberline {3.2}Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Params Struct Reference}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{7}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Member Data Documentation}{7}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}config\_file}{7}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}input\_file}{7}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}output\_file}{7}{subsubsection.3.2.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}port}{8}{subsubsection.3.2.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}server\_address}{8}{subsubsection.3.2.2.5}%
+\contentsline {section}{\numberline {3.3}Connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{9}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Constructor \& Destructor Documentation}{9}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}ConnectionManager()}{9}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}$\sim $ConnectionManager()}{9}{subsubsection.3.3.2.2}%
+\contentsline {subsection}{\numberline {3.3.3}Member Function Documentation}{9}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}authenticate()}{9}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}processVectors()}{10}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}receiveData()}{10}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}receiveString()}{10}{subsubsection.3.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.3.5}sendData()}{10}{subsubsection.3.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.3.6}sendString()}{11}{subsubsection.3.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.4}Member Data Documentation}{11}{subsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.4.1}port\_}{11}{subsubsection.3.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.4.2}server\_addr\_}{11}{subsubsection.3.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.3.4.3}socket\_}{11}{subsubsection.3.3.4.3}%
+\contentsline {section}{\numberline {3.4}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{12}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{12}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Constructor \& Destructor Documentation}{12}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}FileHandler()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}$\sim $FileHandler()}{12}{subsubsection.3.4.2.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}FileHandler()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.3.4.2.3}%
+\contentsline {subsection}{\numberline {3.4.3}Member Function Documentation}{13}{subsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}operator=()}{13}{subsubsection.3.4.3.1}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}readConfig()}{13}{subsubsection.3.4.3.2}%
+\contentsline {subsubsection}{\numberline {3.4.3.3}readVectors()}{13}{subsubsection.3.4.3.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.4}saveResults()}{13}{subsubsection.3.4.3.4}%
+\contentsline {section}{\numberline {3.5}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface Class Reference}{14}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{14}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Constructor \& Destructor Documentation}{14}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}UserInterface()}{14}{subsubsection.3.5.2.1}%
+\contentsline {subsection}{\numberline {3.5.3}Member Function Documentation}{15}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}getHelp()}{15}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}getParams()}{15}{subsubsection.3.5.3.2}%
+\contentsline {subsubsection}{\numberline {3.5.3.3}parseArguments()}{15}{subsubsection.3.5.3.3}%
+\contentsline {subsection}{\numberline {3.5.4}Member Data Documentation}{15}{subsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.4.1}desc\_}{15}{subsubsection.3.5.4.1}%
+\contentsline {subsubsection}{\numberline {3.5.4.2}params\_}{15}{subsubsection.3.5.4.2}%
+\contentsline {chapter}{\numberline {4}File Documentation}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}src/auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.cpp File Reference}{17}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{17}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}src/auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Macro Definition Documentation}{18}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}CRYPTOPP\_ENABLE\_NAMESPACE\_WEAK}{19}{subsubsection.4.2.2.1}%
+\contentsline {section}{\numberline {4.3}src/connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.cpp File Reference}{19}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{19}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}src/connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{19}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{20}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}src/file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.cpp File Reference}{20}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{20}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}src/file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.h File Reference}{21}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{21}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.7}src/main.cpp File Reference}{22}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{22}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{22}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}main()}{22}{subsubsection.4.7.2.1}%
+\contentsline {section}{\numberline {4.8}src/user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.cpp File Reference}{23}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{23}{subsection.4.8.1}%
+\contentsline {section}{\numberline {4.9}src/user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.h File Reference}{23}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{24}{subsection.4.9.1}%
+\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{25}{section*.31}%

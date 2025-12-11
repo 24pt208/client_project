@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +28,7 @@
    <div id="projectname">Сетевой клиент
    &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Клиент для обработки векторов на сервере</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +51,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classAuthManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,10 +82,10 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classAuthManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AuthManager Class Reference</div>  </div>
@@ -81,10 +103,70 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6bf14f0993a741b3f3c7c1da298cddaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947b6046a47f67804e2a0114103bb0c7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a947b6046a47f67804e2a0114103bb0c7">computeHash</a> (const std::string &amp;salt, const std::string &amp;password)</td></tr>
 <tr class="separator:a947b6046a47f67804e2a0114103bb0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a625c6cfdfc4e434abaff2ddebdd29374"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a625c6cfdfc4e434abaff2ddebdd29374">AuthManager</a> ()=delete</td></tr>
+<tr class="separator:a625c6cfdfc4e434abaff2ddebdd29374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc0675ca3f7e398a8140cc35d0530fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a4dc0675ca3f7e398a8140cc35d0530fb">~AuthManager</a> ()=delete</td></tr>
+<tr class="separator:a4dc0675ca3f7e398a8140cc35d0530fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Статический класс для криптографических операций </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+
+<p class="definition">Definition at line <a class="el" href="auth__manager_8h_source.html#l00015">15</a> of file <a class="el" href="auth__manager_8h_source.html">auth_manager.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a625c6cfdfc4e434abaff2ddebdd29374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a625c6cfdfc4e434abaff2ddebdd29374">&#9670;&nbsp;</a></span>AuthManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::AuthManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dc0675ca3f7e398a8140cc35d0530fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc0675ca3f7e398a8140cc35d0530fb">&#9670;&nbsp;</a></span>~AuthManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::~AuthManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a947b6046a47f67804e2a0114103bb0c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a947b6046a47f67804e2a0114103bb0c7">&#9670;&nbsp;</a></span>computeHash()</h2>
 
@@ -119,6 +201,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="auth__manager_8cpp_source.html#l00026">26</a> of file <a class="el" href="auth__manager_8cpp_source.html">auth_manager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="connection__manager_8cpp_source.html#l00055">ConnectionManager::authenticate()</a>.</p>
+
 </div>
 </div>
 <a id="a6bf14f0993a741b3f3c7c1da298cddaf"></a>
@@ -144,16 +230,24 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="auth__manager_8cpp_source.html#l00016">16</a> of file <a class="el" href="auth__manager_8cpp_source.html">auth_manager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="connection__manager_8cpp_source.html#l00055">ConnectionManager::authenticate()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="auth__manager_8h_source.html">auth_manager.h</a></li>
-<li>src/<a class="el" href="auth__manager_8cpp.html">auth_manager.cpp</a></li>
+<li>src/<a class="el" href="auth__manager_8cpp_source.html">auth_manager.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAuthManager.html">AuthManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

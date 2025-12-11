@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +28,7 @@
    <div id="projectname">Сетевой клиент
    &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Клиент для обработки векторов на сервере</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +52,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,10 +83,19 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div><ul>
+<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+
+<h3><a id="index_a"></a>- a -</h3><ul>
 <li>authenticate()
 : <a class="el" href="classConnectionManager.html#abe29edfc1c35f0ec66e882650a616c87">ConnectionManager</a>
 </li>
+<li>AuthManager()
+: <a class="el" href="classAuthManager.html#a625c6cfdfc4e434abaff2ddebdd29374">AuthManager</a>
+</li>
+</ul>
+
+
+<h3><a id="index_c"></a>- c -</h3><ul>
 <li>computeHash()
 : <a class="el" href="classAuthManager.html#a947b6046a47f67804e2a0114103bb0c7">AuthManager</a>
 </li>
@@ -75,6 +105,24 @@ $(function() {
 <li>ConnectionManager()
 : <a class="el" href="classConnectionManager.html#abf196969be8197358e3313314b9d91e3">ConnectionManager</a>
 </li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
+<li>desc_
+: <a class="el" href="classUserInterface.html#af8e40087105d86d09b382d397524867d">UserInterface</a>
+</li>
+</ul>
+
+
+<h3><a id="index_f"></a>- f -</h3><ul>
+<li>FileHandler()
+: <a class="el" href="classFileHandler.html#a07661bacc2ad3e391e9a57a9080dc354">FileHandler</a>
+</li>
+</ul>
+
+
+<h3><a id="index_g"></a>- g -</h3><ul>
 <li>generateSalt()
 : <a class="el" href="classAuthManager.html#a6bf14f0993a741b3f3c7c1da298cddaf">AuthManager</a>
 </li>
@@ -84,11 +132,29 @@ $(function() {
 <li>getParams()
 : <a class="el" href="classUserInterface.html#ae8fa642b7277cf9cdc3ecae9aff7dfea">UserInterface</a>
 </li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
 <li>input_file
 : <a class="el" href="structClientParams.html#a01e357907518bd58cbd259c41e879b4b">ClientParams</a>
 </li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>operator=()
+: <a class="el" href="classFileHandler.html#a294a60a3b969cd0a23107a1308931151">FileHandler</a>
+</li>
 <li>output_file
 : <a class="el" href="structClientParams.html#a6a05f642ee6555f60b08e2674d0d5518">ClientParams</a>
+</li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>params_
+: <a class="el" href="classUserInterface.html#adf808152ef245cd2d1674df87555428d">UserInterface</a>
 </li>
 <li>parseArguments()
 : <a class="el" href="classUserInterface.html#a4e73e1919254b42615165e5ad03b679a">UserInterface</a>
@@ -102,6 +168,10 @@ $(function() {
 <li>processVectors()
 : <a class="el" href="classConnectionManager.html#a21073516e0de49c4133f2dad2adf4d82">ConnectionManager</a>
 </li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
 <li>readConfig()
 : <a class="el" href="classFileHandler.html#abe55899ef860571b11d660cc26e3f04a">FileHandler</a>
 </li>
@@ -114,6 +184,10 @@ $(function() {
 <li>receiveString()
 : <a class="el" href="classConnectionManager.html#a86cf25baeb13b03524b62672a11f0ee5">ConnectionManager</a>
 </li>
+</ul>
+
+
+<h3><a id="index_s"></a>- s -</h3><ul>
 <li>saveResults()
 : <a class="el" href="classFileHandler.html#af0d9bfa7dd3a74351f871fa71e5dc0cc">FileHandler</a>
 </li>
@@ -132,29 +206,34 @@ $(function() {
 <li>socket_
 : <a class="el" href="classConnectionManager.html#a9548715ec6e2b25c4a404e0ae0caeb44">ConnectionManager</a>
 </li>
-<li>test_filename
-: <a class="el" href="structTestFileFixture.html#aec7f3f16e4af2cba18c40c19f9ae1d76">TestFileFixture</a>
-</li>
-<li>test_output
-: <a class="el" href="structTestFileFixture.html#a841a8ec3123242db56ee2dfb654d7596">TestFileFixture</a>
-</li>
-<li>TestFileFixture()
-: <a class="el" href="structTestFileFixture.html#a9a577690f2ed068ec3a46ffc0209161c">TestFileFixture</a>
-</li>
+</ul>
+
+
+<h3><a id="index_u"></a>- u -</h3><ul>
 <li>UserInterface()
 : <a class="el" href="classUserInterface.html#ae6fb70370701b3bd6120e923df9705b0">UserInterface</a>
+</li>
+</ul>
+
+
+<h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~AuthManager()
+: <a class="el" href="classAuthManager.html#a4dc0675ca3f7e398a8140cc35d0530fb">AuthManager</a>
 </li>
 <li>~ConnectionManager()
 : <a class="el" href="classConnectionManager.html#a5c2a49d02244fc399deba3ce6ffe77ac">ConnectionManager</a>
 </li>
-<li>~TestFileFixture()
-: <a class="el" href="structTestFileFixture.html#a5b65e03895a6cda2c035d28a7a5d1faf">TestFileFixture</a>
+<li>~FileHandler()
+: <a class="el" href="classFileHandler.html#a5470c1297f5f78ba0b6387e83b2a04db">FileHandler</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>
