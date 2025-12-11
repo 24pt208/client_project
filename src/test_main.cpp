@@ -1,16 +1,3 @@
-/**
- * @file test_main.cpp
- * @brief Модульные тесты для клиентского приложения
- * @details Содержит тесты для всех компонентов системы:
- *          - UserInterface (пользовательский интерфейс)
- *          - FileHandler (работа с файлами)
- *          - AuthManager (аутентификация)
- *          - Интеграционные тесты
- * 
- * @note Использует фреймворк UnitTest++
- * @note Все тесты выполняются автоматически при запуске
- */
-
 #include <UnitTest++/UnitTest++.h>
 #include "user_interface.h"
 #include "file_handler.h"
@@ -21,17 +8,8 @@
 #include <iostream>  
 
 // Тестирование пользовательского интерфейса
-/**
- * @test Suite UserInterfaceTest
- * @brief Тесты для класса UserInterface
- * @details Проверяет разбор параметров командной строки
- */
 SUITE(UserInterfaceTest)
 {
-    /**
-     * @test HelpShort
-     * @brief Тест короткой формы справки (-h)
-     */
     TEST(HelpShort) {
         UserInterface ui;
         const char* argv[] = {"test", "-h", nullptr};
@@ -39,10 +17,6 @@ SUITE(UserInterfaceTest)
         CHECK(!ui.parseArguments(argc, const_cast<char**>(argv)));
     }
     
-    /**
-     * @test HelpLong
-     * @brief Тест длинной формы справки (--help)
-     */
     TEST(HelpLong) {
         UserInterface ui;
         const char* argv[] = {"test", "--help", nullptr};
@@ -50,10 +24,6 @@ SUITE(UserInterfaceTest)
         CHECK(!ui.parseArguments(argc, const_cast<char**>(argv)));
     }
     
-    /**
-     * @test ValidParameters
-     * @brief Тест корректных параметров командной строки
-     */
     TEST(ValidParameters) {
         UserInterface ui;
         const char* argv[] = {"test", "-s", "127.0.0.1", "-i", "input.txt", 
@@ -68,10 +38,6 @@ SUITE(UserInterfaceTest)
         CHECK_EQUAL("config.conf", params.config_file);
     }
     
-    /**
-     * @test MissingRequiredParameters
-     * @brief Тест отсутствия обязательных параметров
-     */
     TEST(MissingRequiredParameters) {
         UserInterface ui;
         const char* argv[] = {"test", "-s", "127.0.0.1", nullptr};
@@ -79,10 +45,6 @@ SUITE(UserInterfaceTest)
         CHECK_THROW(ui.parseArguments(argc, const_cast<char**>(argv)), std::runtime_error);
     }
     
-    /**
-     * @test DefaultValues
-     * @brief Тест значений по умолчанию
-     */
     TEST(DefaultValues) {
         UserInterface ui;
         const char* argv[] = {"test", "-s", "127.0.0.1", "-i", "input.txt", 
@@ -95,10 +57,6 @@ SUITE(UserInterfaceTest)
         CHECK_EQUAL("~/.config/vclient.conf", params.config_file);
     }
     
-    /**
-     * @test HelpWithOtherParameters
-     * @brief Тест комбинации -h с другими параметрами
-     */
     TEST(HelpWithOtherParameters) {
         UserInterface ui;
         const char* argv[] = {"test", "-h", "-s", "127.0.0.1", nullptr};
@@ -107,19 +65,11 @@ SUITE(UserInterfaceTest)
     }
 }
 
-/**
- * @struct TestFileFixture
- * @brief Фикстура для тестирования работы с файлами
- * @details Создает временные тестовые файлы и автоматически удаляет их
- */
+// Фикстура для тестирования файлов
 struct TestFileFixture {
-    std::string test_filename; ///< Имя тестового входного файла
-    std::string test_output;   ///< Имя тестового выходного файла
+    std::string test_filename;
+    std::string test_output;
     
-    /**
-     * @brief Конструктор фикстуры
-     * @details Создает тестовый файл с векторами
-     */
     TestFileFixture() : test_filename("test_input.txt"), test_output("test_output.bin") {
         // Создаем тестовый файл
         std::ofstream file(test_filename);
@@ -131,10 +81,6 @@ struct TestFileFixture {
         file.close();
     }
     
-    /**
-     * @brief Деструктор фикстуры
-     * @details Удаляет все созданные временные файлы
-     */
     ~TestFileFixture() {
         std::remove(test_filename.c_str());
         std::remove(test_output.c_str());
@@ -145,17 +91,8 @@ struct TestFileFixture {
 };
 
 // Тестирование работы с файлами
-/**
- * @test Suite FileHandlerTest
- * @brief Тесты для класса FileHandler
- * @details Проверяет чтение и запись файлов
- */
 SUITE(FileHandlerTest)
 {
-    /**
-     * @test ReadVectorsValid
-     * @brief Тест чтения корректного файла с векторами
-     */
     TEST_FIXTURE(TestFileFixture, ReadVectorsValid) {
         auto vectors = FileHandler::readVectors("test_input.txt");
         CHECK_EQUAL(2, vectors.size());
@@ -168,18 +105,10 @@ SUITE(FileHandlerTest)
         CHECK_EQUAL(20, vectors[1][1]);
     }
     
-    /**
-     * @test ReadVectorsFileNotFound
-     * @brief Тест чтения несуществующего файла
-     */
     TEST(ReadVectorsFileNotFound) {
         CHECK_THROW(FileHandler::readVectors("nonexistent_file.txt"), std::system_error);
     }
     
-    /**
-     * @test SaveResultsValid
-     * @brief Тест сохранения результатов в двоичный файл
-     */
     TEST_FIXTURE(TestFileFixture, SaveResultsValid) {
         std::vector<int32_t> results = {42, 123, -456};
         FileHandler::saveResults("test_output.bin", results);
@@ -204,10 +133,6 @@ SUITE(FileHandlerTest)
         file.close();
     }
     
-    /**
-     * @test SaveResultsEmpty
-     * @brief Тест сохранения пустых результатов
-     */
     TEST_FIXTURE(TestFileFixture, SaveResultsEmpty) {
         std::vector<int32_t> results = {};
         FileHandler::saveResults("test_output.bin", results);
@@ -222,10 +147,6 @@ SUITE(FileHandlerTest)
         file.close();
     }
     
-    /**
-     * @test ReadConfigValid
-     * @brief Тест чтения корректного конфигурационного файла
-     */
     TEST_FIXTURE(TestFileFixture, ReadConfigValid) {
         // Создаем временный конфиг файл
         std::ofstream config("test_config.conf");
@@ -237,10 +158,6 @@ SUITE(FileHandlerTest)
         CHECK_EQUAL("testpass", password);
     }
     
-    /**
-     * @test ReadConfigWithTilde
-     * @brief Тест чтения конфигурации с путем, содержащим тильду
-     */
     TEST_FIXTURE(TestFileFixture, ReadConfigWithTilde) {
         // Тестируем обработку пути с ~
         std::string home = std::getenv("HOME");
@@ -257,10 +174,6 @@ SUITE(FileHandlerTest)
         std::remove(config_path.c_str());
     }
     
-    /**
-     * @test ReadConfigInvalidFormat
-     * @brief Тест чтения конфигурации с неверным форматом
-     */
     TEST_FIXTURE(TestFileFixture, ReadConfigInvalidFormat) {
         std::ofstream config("test_config.conf");
         config << "invalid_format_without_colon";
@@ -269,10 +182,6 @@ SUITE(FileHandlerTest)
         CHECK_THROW(FileHandler::readConfig("test_config.conf"), std::runtime_error);
     }
     
-    /**
-     * @test ReadConfigEmptyFile
-     * @brief Тест чтения пустого конфигурационного файла
-     */
     TEST_FIXTURE(TestFileFixture, ReadConfigEmptyFile) {
         std::ofstream config("test_config.conf");
         config << "";
@@ -281,10 +190,6 @@ SUITE(FileHandlerTest)
         CHECK_THROW(FileHandler::readConfig("test_config.conf"), std::runtime_error);
     }
     
-    /**
-     * @test ReadConfigOnlyLogin
-     * @brief Тест чтения конфигурации только с логином
-     */
     TEST_FIXTURE(TestFileFixture, ReadConfigOnlyLogin) {
         std::ofstream config("test_config.conf");
         config << "loginonly:";
@@ -293,10 +198,6 @@ SUITE(FileHandlerTest)
         CHECK_THROW(FileHandler::readConfig("test_config.conf"), std::runtime_error);
     }
     
-    /**
-     * @test ReadConfigOnlyPassword
-     * @brief Тест чтения конфигурации только с паролем
-     */
     TEST_FIXTURE(TestFileFixture, ReadConfigOnlyPassword) {
         std::ofstream config("test_config.conf");
         config << ":passwordonly";
@@ -307,26 +208,13 @@ SUITE(FileHandlerTest)
 }
 
 // Тестирование аутентификации
-/**
- * @test Suite AuthManagerTest
- * @brief Тесты для класса AuthManager
- * @details Проверяет криптографические функции аутентификации
- */
 SUITE(AuthManagerTest)
 {
-    /**
-     * @test GenerateSaltLength
-     * @brief Тест длины генерируемой соли
-     */
     TEST(GenerateSaltLength) {
         std::string salt = AuthManager::generateSalt();
         CHECK_EQUAL(16, salt.length()); // 64 бита = 16 hex цифр
     }
     
-    /**
-     * @test GenerateSaltHexFormat
-     * @brief Тест формата соли (шестнадцатеричные символы)
-     */
     TEST(GenerateSaltHexFormat) {
         std::string salt = AuthManager::generateSalt();
         
@@ -337,10 +225,6 @@ SUITE(AuthManagerTest)
         }
     }
     
-    /**
-     * @test GenerateSaltUnique
-     * @brief Тест уникальности соли
-     */
     TEST(GenerateSaltUnique) {
         std::string salt1 = AuthManager::generateSalt();
         std::string salt2 = AuthManager::generateSalt();
@@ -352,10 +236,6 @@ SUITE(AuthManagerTest)
         CHECK(salt2 != salt3);
     }
     
-    /**
-     * @test ComputeHashConsistent
-     * @brief Тест консистентности хеша
-     */
     TEST(ComputeHashConsistent) {
         std::string salt = "1234567890ABCDEF";
         std::string password = "testpassword";
@@ -370,10 +250,6 @@ SUITE(AuthManagerTest)
         CHECK_EQUAL(hash2, hash3);
     }
     
-    /**
-     * @test ComputeHashDifferentForDifferentInputs
-     * @brief Тест разных хешей для разных паролей
-     */
     TEST(ComputeHashDifferentForDifferentInputs) {
         std::string salt = "1234567890ABCDEF";
         std::string password1 = "password1";
@@ -390,10 +266,6 @@ SUITE(AuthManagerTest)
         CHECK(hash2 != hash3);
     }
     
-    /**
-     * @test ComputeHashDifferentForDifferentSalts
-     * @brief Тест разных хешей для разных солей
-     */
     TEST(ComputeHashDifferentForDifferentSalts) {
         std::string salt1 = "1234567890ABCDEF";
         std::string salt2 = "FEDCBA0987654321";
@@ -410,10 +282,6 @@ SUITE(AuthManagerTest)
         CHECK(hash2 != hash3);
     }
     
-    /**
-     * @test ComputeHashFormat
-     * @brief Тест формата MD5 хеша
-     */
     TEST(ComputeHashFormat) {
         std::string salt = "0000000000000000";
         std::string password = "test";
@@ -429,10 +297,6 @@ SUITE(AuthManagerTest)
         }
     }
     
-    /**
-     * @test ComputeHashKnownValue
-     * @brief Тест известного значения хеша
-     */
     TEST(ComputeHashKnownValue) {
         // Тест на известное значение MD5 хеша
         std::string salt = "0000000000000000";
@@ -449,10 +313,6 @@ SUITE(AuthManagerTest)
         CHECK_EQUAL(32, empty_hash.length());
     }
     
-    /**
-     * @test ComputeHashSpecialCharacters
-     * @brief Тест хеша со специальными символами
-     */
     TEST(ComputeHashSpecialCharacters) {
         std::string salt = "1234567890ABCDEF";
         std::string password1 = "password with spaces";
@@ -473,17 +333,8 @@ SUITE(AuthManagerTest)
 }
 
 // Интеграционные тесты (без реального сетевого взаимодействия)
-/**
- * @test Suite IntegrationTest
- * @brief Интеграционные тесты
- * @details Проверяет совместную работу компонентов
- */
 SUITE(IntegrationTest)
 {
-    /**
-     * @test FileReadAndSaveIntegration
-     * @brief Интеграционный тест чтения и сохранения файлов
-     */
     TEST_FIXTURE(TestFileFixture, FileReadAndSaveIntegration) {
         // Читаем векторы из файла
         auto vectors = FileHandler::readVectors("test_input.txt");
@@ -525,10 +376,6 @@ SUITE(IntegrationTest)
         file.close();
     }
     
-    /**
-     * @test ConfigAndAuthIntegration
-     * @brief Интеграционный тест конфигурации и аутентификации
-     */
     TEST_FIXTURE(TestFileFixture, ConfigAndAuthIntegration) {
         // Создаем конфиг файл
         std::ofstream config("test_config.conf");
@@ -560,10 +407,6 @@ SUITE(IntegrationTest)
         }
     }
     
-    /**
-     * @test CompleteWorkflow
-     * @brief Тест полного рабочего процесса
-     */
     TEST_FIXTURE(TestFileFixture, CompleteWorkflow) {
         // Полный рабочий процесс (без реального сетевого взаимодействия)
         
@@ -606,16 +449,8 @@ SUITE(IntegrationTest)
 }
 
 // Тестирование обработки ошибок
-/**
- * @test Suite ErrorHandlingTest
- * @brief Тесты обработки ошибок
- */
 SUITE(ErrorHandlingTest)
 {
-    /**
-     * @test FileReadErrors
-     * @brief Тест ошибок чтения файлов
-     */
     TEST_FIXTURE(TestFileFixture, FileReadErrors) {
         // Создаем файл с неверным форматом
         std::ofstream bad_file("invalid_file.txt");
@@ -631,10 +466,6 @@ SUITE(ErrorHandlingTest)
         CHECK_THROW(FileHandler::readVectors("empty_file.txt"), std::runtime_error);
     }
     
-    /**
-     * @test InvalidVectorData
-     * @brief Тест неверных данных векторов
-     */
     TEST_FIXTURE(TestFileFixture, InvalidVectorData) {
         // Создаем файл с неверными данными векторов
         std::ofstream bad_file("invalid_file.txt");
@@ -647,12 +478,7 @@ SUITE(ErrorHandlingTest)
     }
 }
 
-/**
- * @brief Главная функция тестов
- * @return int Количество неудачных тестов (0 - все тесты прошли)
- * 
- * @details Запускает все модульные тесты и выводит результаты
- */
+// Главная функция тестов
 int main() {
     std::cout << "=== Запуск модульных тестов клиента ===" << std::endl;
     std::cout << "Тестирование всех компонентов системы..." << std::endl;

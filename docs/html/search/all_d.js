@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['user_5finterface_2ecpp_48',['user_interface.cpp',['../user__interface_8cpp.html',1,'']]],
-  ['user_5finterface_2eh_49',['user_interface.h',['../user__interface_8h.html',1,'']]],
-  ['userinterface_50',['UserInterface',['../classUserInterface.html',1,'UserInterface'],['../classUserInterface.html#ae6fb70370701b3bd6120e923df9705b0',1,'UserInterface::UserInterface()']]]
+  ['_7econnectionmanager_47',['~ConnectionManager',['../classConnectionManager.html#a5c2a49d02244fc399deba3ce6ffe77ac',1,'ConnectionManager']]],
+  ['_7etestfilefixture_48',['~TestFileFixture',['../structTestFileFixture.html#a5b65e03895a6cda2c035d28a7a5d1faf',1,'TestFileFixture']]]
 ];

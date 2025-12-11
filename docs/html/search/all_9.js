@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['params_5f_26',['params_',['../classUserInterface.html#adf808152ef245cd2d1674df87555428d',1,'UserInterface']]],
-  ['parsearguments_27',['parseArguments',['../classUserInterface.html#a4e73e1919254b42615165e5ad03b679a',1,'UserInterface']]],
-  ['port_28',['port',['../structClientParams.html#a625723918321c4bd187b86d06929214b',1,'ClientParams']]],
-  ['port_5f_29',['port_',['../classConnectionManager.html#abcc773c12476e73eeeecff810ad9fbc1',1,'ConnectionManager']]],
-  ['processvectors_30',['processVectors',['../classConnectionManager.html#a21073516e0de49c4133f2dad2adf4d82',1,'ConnectionManager']]]
+  ['readconfig_28',['readConfig',['../classFileHandler.html#abe55899ef860571b11d660cc26e3f04a',1,'FileHandler']]],
+  ['readme_2emd_29',['README.md',['../README_8md.html',1,'']]],
+  ['readvectors_30',['readVectors',['../classFileHandler.html#a1da9f6bcd8eea975bff60f6acf3f9849',1,'FileHandler']]],
+  ['receivedata_31',['receiveData',['../classConnectionManager.html#a88633c426c967b62b2c4240b5cee8290',1,'ConnectionManager']]],
+  ['receivestring_32',['receiveString',['../classConnectionManager.html#a86cf25baeb13b03524b62672a11f0ee5',1,'ConnectionManager']]]
 ];

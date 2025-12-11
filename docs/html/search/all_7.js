@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_22',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../test__main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test_main.cpp']]],
-  ['main_2ecpp_23',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['output_5ffile_23',['output_file',['../structClientParams.html#a6a05f642ee6555f60b08e2674d0d5518',1,'ClientParams']]]
 ];

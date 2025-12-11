@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['operator_3d_24',['operator=',['../classFileHandler.html#a294a60a3b969cd0a23107a1308931151',1,'FileHandler']]],
-  ['output_5ffile_25',['output_file',['../structClientParams.html#a6a05f642ee6555f60b08e2674d0d5518',1,'ClientParams']]]
+  ['parsearguments_24',['parseArguments',['../classUserInterface.html#a4e73e1919254b42615165e5ad03b679a',1,'UserInterface']]],
+  ['port_25',['port',['../structClientParams.html#a625723918321c4bd187b86d06929214b',1,'ClientParams']]],
+  ['port_5f_26',['port_',['../classConnectionManager.html#abcc773c12476e73eeeecff810ad9fbc1',1,'ConnectionManager']]],
+  ['processvectors_27',['processVectors',['../classConnectionManager.html#a21073516e0de49c4133f2dad2adf4d82',1,'ConnectionManager']]]
 ];

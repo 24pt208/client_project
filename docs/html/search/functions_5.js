@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_84',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../test__main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test_main.cpp']]]
+  ['parsearguments_77',['parseArguments',['../classUserInterface.html#a4e73e1919254b42615165e5ad03b679a',1,'UserInterface']]],
+  ['processvectors_78',['processVectors',['../classConnectionManager.html#a21073516e0de49c4133f2dad2adf4d82',1,'ConnectionManager']]]
 ];
